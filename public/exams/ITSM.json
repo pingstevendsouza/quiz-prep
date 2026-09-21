@@ -1,0 +1,4582 @@
+{
+    "response_code": 2,
+    "results":[
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which field from the configuration item will automatically populate in the Assignment group field of an incident record?",
+        "correct_answers": [
+            "Support group"
+        ],
+        "incorrect_answers": [
+            "Managed by",
+            "Approval group",
+            "Change group"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following are defined for a given change model? (choose three)",
+        "correct_answers": [
+            "State model",
+            "State transition conditions",
+            "State transitions"
+        ],
+        "incorrect_answers": [
+            "Phase transitions",
+            "Phase model"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "When is a change task for post implementation review created for an unauthorized change?",
+        "correct_answers": [
+            "When the change request moves to a state of review"
+        ],
+        "incorrect_answers": [
+            "When the change request moves to close",
+            "When a change manager accepts the change",
+            "When the change request moves to a state of assess"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which should be used to explore the entire hierarchy and table definitions of the configuration management database classes?",
+        "correct_answers": [
+            "CI Class Manager"
+        ],
+        "incorrect_answers": [
+            "Reports",
+            "Application menus",
+            "Dependency view"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following cannot be defined or set through a Catalog UI Policy?",
+        "correct_answers": [
+            "Setting a catalog category to visible"
+        ],
+        "incorrect_answers": [
+            "Setting a variable to mandatory",
+            "Apply a requirement to all form views",
+            "Setting a variable to read-only"
+        ]
+    },
+	
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which type of catalog item should be used to create an incident record from the portal?",
+    "correct_answers": [
+      "record producer"
+    ],
+    "incorrect_answers": [
+      "incident template",
+      "request item",
+      "order guide"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which incident management roles are activated by installing the ITSM Roles plugin (com.snc.itsm.roles)?",
+    "correct_answers": [
+      "sn_incident_read",
+      "sn_incident_write"
+    ],
+    "incorrect_answers": [
+      "itsm_incident_read",
+      "incident_manager",
+      "itsm_incident_write"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A customer requests that when the Service Desk agent clicks on the information icon for the Caller's name, the quick view frame shows only the following fields: User name, Manager name, Email address, employee ID. How would you modify the quick view frame?",
+    "correct_answers": [
+      "update the sys_popup view for the user table"
+    ],
+    "incorrect_answers": [
+      "update the sys_quick view for the caller table",
+      "update the sys_popup view for the caller table",
+      "update the sys_quick view for the user table"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer has built a mature knowledge base, with articles targeted to internal audiences - which are technical. Other articles are written for end users, with simple instructions. From the incident form, the agents would be able to identify which articles are visible to the callers. What feature would you use, to satisfy this requirement?",
+    "correct_answers": [
+      "Search as User"
+    ],
+    "incorrect_answers": [
+      "Internal/External Highlighting",
+      "Show User viewable",
+      "User only view"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer is using the baseline create incident catalog item and would like to add a few additional input fields. How should you update the catalog item?",
+    "correct_answers": [
+      "Edit in Catalog Builder"
+    ],
+    "incorrect_answers": [
+      "Edit in Catalog Item Designer",
+      "Edit in Item Designer",
+      "Edit in Form Designer"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer is complaining that Service Desk users keep accidentally assigning incidents to the Network CAB instead of Network Support. You have confirmed that: The Network Support group record has two types: Incident and Change. The Network CAB group record has the group type: Change. What could you do on the incident form, for the Assignment group field to resolve this issue?",
+    "correct_answers": [
+      "Add a dictionary override to specify the incident group reference qualifier"
+    ],
+    "incorrect_answers": [
+      "Add a UI action to hide the Network CAB group from the list",
+      "Add a UI action to provide an error message if the Network CAB group is selected",
+      "Modify the choice list to include only the appropriate group types"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which agent workspace feature gives agents automatic search results that show possible solutions for records they open?",
+    "correct_answers": [
+      "Agent Assist"
+    ],
+    "incorrect_answers": [
+      "Chat Bot",
+      "Related Search Results",
+      "Knowledge Bases",
+      "Intelligent Agent"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which capability provides visibility to data joined between multiple tables?",
+    "correct_answers": [
+      "Database Views"
+    ],
+    "incorrect_answers": [
+      "Metric Tables",
+      "Published Reports",
+      "Custom Tables",
+      "Breakdown Sources"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What tools are available to the assignee to help resolve an incident?",
+    "correct_answers": [
+      "Knowledge Articles",
+      "Workarounds"
+    ],
+    "incorrect_answers": [
+      "CI Class Manager",
+      "Incident Overview Dashboard",
+      "Enterprise CMDB Dashboard"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When using inbound email actions, what happens if an email is received which has no watermark or reference number?",
+    "correct_answers": [
+      "new incident created from the message"
+    ],
+    "incorrect_answers": [
+      "new interaction is created from the message",
+      "email is rejected and auto-reply sent to sender",
+      "new case is created from the message"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Under what circumstances, should you use the communicate workaround related link on the problem record?",
+    "correct_answers": [
+      "the workaround is helpful information for the callers on the problems related incidents"
+    ],
+    "incorrect_answers": [
+      "the workaround should be published to a knowledge article, visible from the portal",
+      "the workaround is helpful information for the members of the problems assignment group",
+      "the workaround is helpful information for the members of the problems work notes list"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which interface is designed for tier 1 agents who solve internal or external customer issues?",
+    "correct_answers": [
+      "IT Service Management Workspace"
+    ],
+    "incorrect_answers": [
+      "ITSM Dashboard",
+      "ITIL Homepage",
+      "Incident Overview"
+    ]
+  },
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When using agent assist in the Agent workspace, what are examples of possible solutions that can be automatically searched and displayed? (Choose five)",
+    "correct_answers": [
+      "Knowledge",
+      "Problems",
+      "Changes",
+      "Cases",
+      "Incidents"
+    ],
+    "incorrect_answers": [
+      "Runbook actions",
+      "SQL Queries"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which module is a useful starting point for a manager to view current state operational information for incident management?",
+    "correct_answers": [
+      "Incident > Overview"
+    ],
+    "incorrect_answers": [
+      "CMDB Health Dashboard",
+      "Manager Workspace",
+      "Critical Incidents Map"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The problem table is extended from what table?",
+    "correct_answers": [
+      "Task"
+    ],
+    "incorrect_answers": [
+      "Major Incident",
+      "Outage",
+      "Problem Task",
+      "Incident"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The Problem Manager wants the Problem Coordinators to be able to Re-analyze a Completed Problem. Which module could they use to make this change?",
+    "correct_answers": [
+      "Problem > Administration > Problem Properties"
+    ],
+    "incorrect_answers": [
+      "System UI > UI Action Groups",
+      "State Management > State Models",
+      "System UI > Form Actions",
+      "System UI > UI Actions"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your problem manager has a structured problem management process, which includes a final review of the solution implemented and of the data regarding incident reduction. When a problem is resolved, after implementing a fix, they want the Post Fix Review task to be automatically created and assigned to the problem assignee. What feature would you use to meet this requirement?",
+    "correct_answers": [
+      "Flow Designer"
+    ],
+    "incorrect_answers": [
+      "State Model",
+      "Workflow Dashboard",
+      "Action Modeler",
+      "Task Creator"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer needs help defining category values for the Problem records. What approach should you suggest?",
+    "correct_answers": [
+      "define categories based on the customers CMDB classes",
+      "re-use existing categories from incident management"
+    ],
+    "incorrect_answers": [
+      "re-use existing categories from legacy systems",
+      "define categories based on ITIL problem taxonomy"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When a user clicks on the communicate fix UI action on the problem form, what happens?",
+    "correct_answers": [
+      "fix is written to the work notes field on any incident associated with the problem, which is active"
+    ],
+    "incorrect_answers": [
+      "fix is written to the comments field on any incident associated with the problem, which is on hold, awaiting problem",
+      "fix is written to the comments field on any incident associated with the problem which is active",
+      "fix is written to a draft knowledge article"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Users with which role can communicate a workaround or fix?",
+    "correct_answers": [
+      "problem_coordinator"
+    ],
+    "incorrect_answers": [
+      "itil_admin",
+      "problem_admin",
+      "problem_task_analyst"
+    ]
+  },
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When a user clicks on the communicate workaround UI Action on the problem form, what happens?",
+    "correct_answers": [
+      "workaround is written to the work notes field on any open incident associated with the problem"
+    ],
+    "incorrect_answers": [
+      "workaround is written to the comments field on any open incident associated with the problem",
+      "workaround is written to the workaround field on any incident associated with the problem",
+      "workaround is written to a draft knowledge article"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A tester wants to submit a bug report, because they are not able to see the communicate fix link under the related links on the problem form. What do you recommend that they confirm, before submitting the bug report?",
+    "correct_answers": [
+      "tester is impersonating the assignee, which has the problem_coordinator role"
+    ],
+    "incorrect_answers": [
+      "tester is impersonating a user with communications.manager role",
+      "tester is impersonating a user with problem_coordinator role",
+      "fix notes field is filled in and saved"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Problem and Problem task records move automatically from new to assess states, when which fields are filled?",
+    "correct_answers": [
+      "state",
+      "assigned to"
+    ],
+    "incorrect_answers": [
+      "short descriptor",
+      "configuration item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On a change approval definition record, what does the 'wait for' condition define?",
+    "correct_answers": [
+      "the number or percentage of users from the approval group that must approve the change"
+    ],
+    "incorrect_answers": [
+      "whether the change approval is sent to an individual user or a group",
+      "the state the change must be in before the approval notifications can be sent",
+      "the fields that must be populated before the approval can be requested"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In what table are change records stored?",
+    "correct_answers": [
+      "Change Request [change_request]"
+    ],
+    "incorrect_answers": [
+      "Change [change_task]",
+      "Change Request [rfc]",
+      "Change [change]",
+      "Change [task_change]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Risk is configured by default, to calculate risk = high for a change that is scheduled with only 3 days lead time. Your customer's change policy requires that changes be requested with 5 days lead time. How would you satisfy this requirement?",
+    "correct_answers": [
+      "update the risk condition for insufficient lead time"
+    ],
+    "incorrect_answers": [
+      "update the risk property for insufficient lead time",
+      "update the risk assessment matrix for insufficient lead time",
+      "update the calculate risk UI action",
+      "update the risk matrix for insufficient lead time"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "How are releases related to projects?",
+    "correct_answers": [
+      "projects can be part of one or more releases"
+    ],
+    "incorrect_answers": [
+      "project tasks and release tasks are interchangeable",
+      "project features are components of a release",
+      "projects need to be completed before releases can be defined",
+      "projects are used to do root cause analysis for releases"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What baseline change flows support the baseline normal change model?",
+    "correct_answers": [
+      "Change - Normal - Assess, Change - Normal - Authorize, Change - Normal - Implement, Change - Implementation tasks"
+    ],
+    "incorrect_answers": [
+      "Change - Normal - New, Change - Normal - Review, Change - Normal - Close, Change - Implementation tasks",
+      "Change - Normal - New, Change - Normal - Assess, Change - Normal - Implement, Change - Implementation tasks",
+      "Change - Normal - Assess, Change - Normal - Authorize, Change - Normal - Close, Change - Implementation tasks"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following change tasks are available by default? (Choose three)",
+    "correct_answers": [
+      "planning",
+      "testing",
+      "review"
+    ],
+    "incorrect_answers": [
+      "deployment",
+      "verification"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the business rule that triggers automatic group assignment on incident, problem, or change requests?",
+    "correct_answers": [
+      "populate assignment group based on CI/SO"
+    ],
+    "incorrect_answers": [
+      "auto-populate ITSM Assignment Groups",
+      "ITSM Assignment Lookup Rule",
+      "Automatic Assignment for ITSM"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the CAB workbench, what are some ways the CAB manager can identify the change requests to be added to a particular meeting agenda?",
+    "correct_answers": [
+      "change requests meeting different conditions, like risk level or type",
+      "use any of the options on the agenda criteria tab"
+    ],
+    "incorrect_answers": [
+      "change requests planned within a certain date range",
+      "change requests for a certain change flow definition"
+    ]
+  },
+  
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A change user complains that with the new preapproved tab, they have to search through many options to find the reboot windows server change. Since they use this change several times per day, it is inconvenient. What should you suggest to make it easier for the change user?",
+    "correct_answers": [
+      "use the pin feature"
+    ],
+    "incorrect_answers": [
+      "make a favorite",
+      "use the keyword search",
+      "drag the change tile to the navigation pane"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Roles control which users can perform which actions on a change record. What are actions, which cannot be performed by anyone, even an administrator? (choose two)",
+    "correct_answers": [
+      "change requests meeting different conditions, like risk level or type",
+      "use any of the options on the agenda criteria tab"
+    ],
+    "incorrect_answers": [
+      "change requests planned within a certain date range",
+      "change requests for a certain change flow definition"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A change user complains that with the new preapproved tab, they have to search through many options to find the reboot windows server change. Since they use this change several times per day, it is inconvenient. What should you suggest to make it easier for the change user?",
+    "correct_answers": [
+      "use the pin feature"
+    ],
+    "incorrect_answers": [
+      "make a favorite",
+      "use the keyword search",
+      "drag the change title to the navigation pane"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Roles control which users can perform which actions on a change record. What are actions, which cannot be performed by anyone, even an administrator?",
+    "correct_answers": [
+      "update change type on an existing change record"
+    ],
+    "incorrect_answers": [
+      "delete a change record",
+      "delete a standard change template",
+      "delete a CAB definition"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the baseline change - normal model, how can change tasks be added?",
+    "correct_answers": [
+      "automatically via the change - implementation subflow",
+      "manually by the user during all states, except closed or canceled"
+    ],
+    "incorrect_answers": [
+      "automatically depending on the category selected on the change request",
+      "manually by the user during new, assess, authorized states"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the baseline change - normal model, when the change request goes to the review state, what happens to the implementation and testing tasks, if they have not been closed?",
+    "correct_answers": [
+      "they are automatically canceled"
+    ],
+    "incorrect_answers": [
+      "they are automatically closed",
+      "they are automatically assigned to the change assignee and closed",
+      "an error displays, requiring that the tasks be closed before moving to review"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On the unauthorized change properties module, what can you configure?",
+    "correct_answers": [
+      "enable/disable creation of unauthorized changes",
+      "CI classes to monitor"
+    ],
+    "incorrect_answers": [
+      "maximum number of unauthorized change records for a CI",
+      "unauthorized change dashboard"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "How do you describe the relationship between a knowledge article and a knowledge base category?",
+    "correct_answers": [
+      "articles can only be published to one category"
+    ],
+    "incorrect_answers": [
+      "articles must be published to at least one category",
+      "articles must be approved by the selected category owner",
+      "articles can be published to a category and subcategory"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What are the different ways a user can provide feedback on a knowledge article? (Choose four.)",
+    "correct_answers": [
+      "Comment on article",
+      "helpful?",
+      "flag article",
+      "5 star scale"
+    ],
+    "incorrect_answers": [
+      "10 Star scale",
+      "pin article"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When using the Knowledge - instant Retire workflow, how does the Valid to date enact a Knowledge article?",
+    "correct_answers": [
+      "on valid to date, article is automatically retired"
+    ],
+    "incorrect_answers": [
+      "on valid to date, retire notification is sent to the knowledge article author",
+      "on valid to date, retire notification is sent to the knowledge base owner",
+      "on valid to date, the article is archived"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the ServiceNow native platform, the service catalog can be accessed via the Self-Service > Service Catalog module. Your customer wants to make modifications to this home page, to add, remove and rearrange the categories. Users with what roles can make these edits? (Choose two.)",
+    "correct_answers": [
+      "catalog_admin",
+      "admin"
+    ],
+    "incorrect_answers": [
+      "sn_catalog_admin",
+      "catalog_editor",
+      "sn_catalog_homepage_write"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What would you use to create a new hire employee request which would allow you to order your workstation and company mobile?",
+    "correct_answers": [
+      "order guide"
+    ],
+    "incorrect_answers": [
+      "knowledge item",
+      "record producer",
+      "catalog item",
+      "content item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which tool allows process owners to use natural language to automate approvals, tasks notifications and other record operations with little to no code?",
+    "correct_answers": [
+      "flow designer"
+    ],
+    "incorrect_answers": [
+      "workflow mapper",
+      "workflow manager",
+      "flow dashboard",
+      "process designer"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What process is responsible for defining and managing the lifecycle of all catalog items, by producing and maintaining the services in the catalog and ensuring that a central, accurate, consistent source of data is provided?",
+    "correct_answers": [
+      "service catalog management"
+    ],
+    "incorrect_answers": [
+      "service portfolio management",
+      "catalog item management",
+      "service mapping"
+    ]
+  },
+  
+  
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer needs different catalogs for: Human Resources - employee facing - for submitting requests to HR; Customer - external customer facing - for ordering company products and services. When these catalogs are created, in which table would the definition be stored?",
+    "correct_answers": [
+      "catalog [sc_catalog]"
+    ],
+    "incorrect_answers": [
+      "business services catalog [bs_catalog]",
+      "service portfolio catalog [sc_portfolio]",
+      "service offering catalog [sn_offering]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When creating a catalog, which field specifies who can edit, update, and delete catalogs, categories, and catalog items?",
+    "correct_answers": [
+      "editor"
+    ],
+    "incorrect_answers": [
+      "manager",
+      "contributors",
+      "owner"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which type of catalog item may be found in a service catalog?",
+    "correct_answers": [
+      "record producers"
+    ],
+    "incorrect_answers": [
+      "requested items",
+      "categories",
+      "execution plans"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following are users able to do when configuring stages in flow designer?",
+    "correct_answers": [
+      "create any number of stages",
+      "import a copy of a pre-defined stage set"
+    ],
+    "incorrect_answers": [
+      "display the stages to the requester",
+      "define the stage set in a subflow"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When creating a catalog, which field specifies who is able to create, modify, publish items in the catalog?",
+    "correct_answers": [
+      "editors"
+    ],
+    "incorrect_answers": [
+      "item admins",
+      "item owners",
+      "authors"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When defining catalog categories and subcategories, what are some good practices to follow?",
+    "correct_answers": [
+      "keep the number of top-level categories to 8-10",
+      "do not go too deep with subcategories: go only 1-2 levels deep"
+    ],
+    "incorrect_answers": [
+      "align categories with CMDB classes where possible",
+      "remember that items can only be assigned to one category"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In request fulfillment, approvals can be required before a request can be fulfilled. Your customer is worried about requests getting stuck in the process flow, if the approver is on extended absence from the office. What can you suggest to alleviate this concern? (Choose two.)",
+    "correct_answers": [
+      "the approver can use the delegate module to assign a person to approve on their behalf, while they are away from the office",
+      "the approval can be defined as a group approval, where any member of the group can approve"
+    ],
+    "incorrect_answers": [
+      "the approver can set their approval notifications to forward to their personal email address",
+      "the approver can set their approval notifications to auto-reply with 'approved' in the subject line"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Released in Quebec, what tool enables you to delegate the creation and maintenance of common and simple use case catalog items to business users?",
+    "correct_answers": [
+      "catalog builder"
+    ],
+    "incorrect_answers": [
+      "catalog wizard",
+      "catalog designer",
+      "catalog item builder"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Request fulfillment relies on three record types, requests, requested items, and catalog tasks. The lifecycle status of these records is reflected in a combination of state and stage fields. Which status field is set by the flow?",
+    "correct_answers": [
+      "stage on requested item"
+    ],
+    "incorrect_answers": [
+      "status on request",
+      "state on catalog task",
+      "state on requested item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Your implementation team has a new Business Analyst. They will be attending their first Service Catalog workshop and will be responsible for capturing notes and decisions from the workshop. What Now Create assets do you recommend they review, to prepare? (Choose two.)",
+    "correct_answers": [
+      "service catalog and request management - workshop preparation guide",
+      "service catalog and request management - process guide"
+    ],
+    "incorrect_answers": [
+      "IT service management - typical challenges and remediation",
+      "ITSM - business outcomes and corresponding KPIs"
+    ]
+  },
+  
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Which role would give you access to the CI Class Manager?",
+    "correct_answers": [
+      "ecmdb_admin"
+    ],
+    "incorrect_answers": [
+      "ecmdb",
+      "class_manager",
+      "sn_class_manager"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "What module do you use to change the setting for the time between incident resolution and closure?",
+    "correct_answers": [
+      "incident properties"
+    ],
+    "incorrect_answers": [
+      "ITSM properties",
+      "system settings",
+      "incident settings",
+      "resolution properties"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "By default, when using inbound actions, what happens if an email is received which has an incident watermark?",
+    "correct_answers": [
+      "incident record is updated, per actions script"
+    ],
+    "incorrect_answers": [
+      "incident SLA clock is unpaused",
+      "auto-reply is sent to sender, recommending they use portal chat",
+      "incident record is re-set to state = attention required"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "When using the email chat, what is the difference between an email template and a quick message?",
+    "correct_answers": [
+      "email template is defined and automatically applied when the email form launches, quick messages are defined and then can be manually applied by user"
+    ],
+    "incorrect_answers": [
+      "email templates are like forms that can be sent to the caller for completion, quick messages are primarily used by the chat bot",
+      "email templates are included with ITSM, quick messages with machine learning",
+      "email templates are defined by users with admin role, quick messages are defined by users with quick_message role"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer wants incidents to close automatically 7 days after the incident is resolved. How do you meet this requirement? (choose two)",
+    "correct_answers": [
+      "from the incident properties application, set enable auto closure of incidents based on resolution date to yes",
+      "modify the incident lifecycle flow to expire after 7 days"
+    ],
+    "incorrect_answers": [
+      "modify the incident lifecycle flow to trigger from the resolved date instead of the updated date",
+      "update the incident_close UI action script"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "What optional incident table is extended from the task table?",
+    "correct_answers": [
+      "incident task [incident_task]"
+    ],
+    "incorrect_answers": [
+      "child incident [incident_child]",
+      "major incident [major_incident]",
+      "parent incident [incident_parent]"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Category and Subcategory values can be set manually on the incident form. What are disadvantages of this approach? (choose two)",
+    "correct_answers": [
+      "too many options may confuse users and increase mis-categorization",
+      "choices have no additional metadata to drive process"
+    ],
+    "incorrect_answers": [
+      "it is difficult to implement",
+      "it is not part of the baseline instance"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "When using the baseline business rule, populate assignment group based on CI/SO, what behavior would you expect on an incident form? (choose two)",
+    "correct_answers": [
+      "if selected CI has a support group, write that group to the assignment group field",
+      "if selected CI does not have a support group from the service offering to the assignment group field"
+    ],
+    "incorrect_answers": [
+      "if selected CI does not have an owner group, write the support group from the service offering to the assignment group field",
+      "if selected CI has an owner group, write that group to the assignment group field"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "On an incident record, where are the fields that appear on the caller lookup select box defined?",
+    "correct_answers": [
+      "the ref_ac_column attribute from the dictionary entry"
+    ],
+    "incorrect_answers": [
+      "the caller lookup field on the user table",
+      "the ref_contributions attribute on the caller lookup form",
+      "the form design of the caller lookup form"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Where do you enable the search as feature for an incident?",
+    "correct_answers": [
+      "related search results table configuration"
+    ],
+    "incorrect_answers": [
+      "incident.deflection system property",
+      "incident properties application",
+      "incident form design"
+    ]
+  },
+  
+ {
+  "type": "multiple",
+    "category": "ITSM",
+    "question": "If the assignment group is empty on an incident record, what happens when an agent that is a member of a single user group clicks the assign to me UI action?",
+    "correct_answers": [
+      "the assignment group field is populated with agents user group"
+    ],
+    "incorrect_answers": [
+      "the agent is prompted to select the assignment group",
+      "an error is displayed indicating the assignment group field must be populated before executing the assign to me UI action",
+      "the assignment group field remains empty"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "A problem record is the Parent to what record?",
+    "correct_answers": [
+      "Problem Task"
+    ],
+    "incorrect_answers": [
+      "Known Error",
+      "Workaround",
+      "Major Incident",
+      "Related Incidents"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "When you create a problem from an incident, impact, urgency and priority are automatically populated, from the incident record. Your problem management process owner wants the problem manager to be responsible for assessing the impact and urgency on the problem, so they don't want the values from incident to be copied over. What module would you use to make this adjustment?",
+    "correct_answers": [
+      "Problem > Administration > Problem Properties"
+    ],
+    "incorrect_answers": [
+      "System Policy > Rules > Priority Lookup Rules",
+      "ITSM > Administration > Properties",
+      "Incident > Administration > Incident Properties"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "As of Quebec, Problem task records will move automatically from one state, to another state, provided the required fields are filled. What are those states?",
+    "correct_answers": [
+      "New to assess"
+    ],
+    "incorrect_answers": [
+      "Assess to work in progress",
+      "On Hold to work in progress",
+      "Draft to assess",
+      "Work in Progress to Closed"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "A new problem manager wants to know how to create reports for monitoring problem management activities. What do you recommend they do before creating new reports?",
+    "correct_answers": [
+      "Go to Reports > View/Run > All, then search for Problem reports"
+    ],
+    "incorrect_answers": [
+      "Submit a new report request via the service catalog",
+      "Take the performance analytics fundamentals course",
+      "Submit a request for the sn_report_creator role",
+      "Turn on data collection jobs"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Your customer wants to know why users with the problem_coordinator role can communicate workarounds and fixes, but users with problem_task_analyst cannot. How do you explain this?",
+    "correct_answers": [
+      "The problem coordinator is responsible for approving or rejecting the proposed message"
+    ],
+    "incorrect_answers": [
+      "The technical resources working on the problem investigation are focused on the technical details, and may provide information that is not useful for the callers",
+      "The problem coordinator is the only role with the ability to recall a message",
+      "The message will be automatically displayed on the portal"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "A user wants to know what makes the known error knowledge base in ServiceNow different from all other knowledge bases. How should you respond?",
+    "correct_answers": [
+      "The known error knowledge articles use a template, which includes the workaround and the cause"
+    ],
+    "incorrect_answers": [
+      "The known error knowledge base documents problems that are under investigation, but not yet have a root cause",
+      "Only users with sn_known_error_write can create known error articles",
+      "Users with sn_problem_write can create known error articles, but not articles for other knowledge bases"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Problem Management provides what benefits for incident management?",
+    "correct_answers": [
+      "Solutions implemented reduce future incidents",
+      "Published workarounds help quickly resolve incidents"
+    ],
+    "incorrect_answers": [
+      "Problem investigations automatically triggered for multiple user incidents",
+      "Incident managers authorize problem investigations"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "A tester reports a bug, because they submitted a known error article from a Problem record, but it is not visible from the known error database. What could cause this?",
+    "correct_answers": [
+      "The article is in draft state, but has not been published"
+    ],
+    "incorrect_answers": [
+      "The problem Management best practice - Madrid - Knowledge integration plugin has not been activated",
+      "The user criteria on the knowledge base is incorrect",
+      "The tester is not impersonating an itil user"
+    ]
+  },
+  {
+   "type": "multiple",
+    "category": "ITSM",
+    "question": "Where can a change manager define the conditions that must be met before a change request can move from one state to another?",
+    "correct_answers": [
+      "Model State Transition Conditions"
+    ],
+    "incorrect_answers": [
+      "Dictionary Overrides",
+      "State choices",
+      "State conditions"
+    ]
+  },
+  
+  
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Where can a change manager define the interval for unauthorized change detection?",
+        "correct_answers": [
+            "Unauthorized Change Properties module"
+        ],
+        "incorrect_answers": [
+            "The CI Change unplanned business rule",
+            "Event Processing Properties module",
+            "Unauthorized Change Flow"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Prior to Quebec, when you click Change > Create New, which page is displayed?",
+        "correct_answers": [
+            "Change Interceptor"
+        ],
+        "incorrect_answers": [
+            "Change landing page",
+            "Change Form",
+            "Change Catalog",
+            "Change Wizard"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Inside a change flow, you can automate a task with a sequence of related steps, like looking up a record, creating a record, or applying a policy. What is this component of the flow called?",
+        "correct_answers": [
+            "Flow Actions"
+        ],
+        "incorrect_answers": [
+            "Flow Activities",
+            "Flow Steps",
+            "Action Pills",
+            "Flow Tasks"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "On the release record, what are the available options on the release phase list?",
+        "correct_answers": [
+            "Requirement Gathering, Design, Development, Build, Deployment, QA, User Acceptance"
+        ],
+        "incorrect_answers": [
+            "Requirement gathering, design, build, roll-out, unit testing, user acceptance, pilot",
+            "Scoping, Design, Develop, Deployment, Build, Roll-out, User Acceptance"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the Quebec release of Change Management, what new architectural features were added?",
+        "correct_answers": [
+            "Change Models, Change Flows, State Transition Models"
+        ],
+        "incorrect_answers": [
+            "Catalog builder and Change Designer",
+            "Change Flows, Change Designer, Change Approval Matrix",
+            "Change PIR Assessments, Change Designer and Change Approval Policies"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline implementation, what are key relationships between Change and CI records? (Choose three)",
+        "correct_answers": [
+            "One Change can be submitted for multiple CIs",
+            "Changes should reference at least one CI",
+            "A CI can be affected by change, even if it is not the CI being changed"
+        ],
+        "incorrect_answers": [
+            "The CI manager is part of the change approval workflow",
+            "The CI Support Group is responsible for change implementations"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In change management, what allows customers to define condition based flows for a fit for purpose model?",
+        "correct_answers": [
+            "State transition models"
+        ],
+        "incorrect_answers": [
+            "State flows",
+            "Workflows 2.0",
+            "Conditional Change Models"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "By default, a business rule, causes the assignment group to be automatically set. How is the group identified?",
+        "correct_answers": [
+            "Support group on CI record, or if empty, the support group on the Service offering"
+        ],
+        "incorrect_answers": [
+            "Change group on CI record, or if empty, the Change group on the Service Offering",
+            "Support group on CI record, or the default assignment group for the user",
+            "Support group on CI record, or if empty, the support group on the Service"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Your implementation has some legacy change types with workflows, and also some new change models. What option for Change Create new will support your scenario?",
+        "correct_answers": [
+            "Landing Page"
+        ],
+        "incorrect_answers": [
+            "Change overview",
+            "Change Interceptor",
+            "Change Catalog"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which change request fields are used in conflict detection?",
+        "correct_answers": [
+            "Planned end date",
+            "Planned start date",
+            "Configuration item"
+        ],
+        "incorrect_answers": [
+            "CI Business critically",
+            "Risk"
+        ]
+    },
+	
+	{
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "What types of Conflicts are detected automatically on the Change requests?",
+        "correct_answers": [
+            "Conflict with blackout schedule",
+            "Another change for the same CI, at the same time",
+            "Conflict with Maintenance Window"
+        ],
+        "incorrect_answers": [
+            "Conflict with assignee shift schedule",
+            "Conflict with company holiday schedule"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "How are releases related to changes?",
+        "correct_answers": [
+            "Releases are comprised of one or more changes"
+        ],
+        "incorrect_answers": [
+            "Changes are comprised of one or more releases",
+            "Releases are implemented prior to changes",
+            "Changes are implemented prior to releases"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Once a catalog item has been requested, what mechanism determines the approvals, and tasks that are triggered in the application?",
+        "correct_answers": [
+            "Flows (Workflows?)"
+        ],
+        "incorrect_answers": [
+            "Processes",
+            "Procedures",
+            "Actions",
+            "Scripts"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Unless there are particular security requirements, what role is given to users that perform request fulfillment work?",
+        "correct_answers": [
+            "task_worker"
+        ],
+        "incorrect_answers": [
+            "itil",
+            "sc_fulfiller",
+            "catalog_fulfiller",
+            "fulfiller"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Your customer is a data center. They have a construction department that builds out spaces for new customers. The customer account representatives are responsible for initiating the construction requests. The guidelines are extensive for how to complete the construction request documentation. Your customer wants the catalog to contain two items: 1. Construction request 2. Getting Started with Construction Requests. The Getting Started Item should contain a link to a Knowledge Article. What type of item would you use to satisfy the requirement for the Getting Started Item?",
+        "correct_answers": [
+            "Knowledge item"
+        ],
+        "incorrect_answers": [
+            "Record Producer",
+            "Content Item",
+            "Order Guide",
+            "Catalog Item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "What is an example of a good use case for an order guide?",
+        "correct_answers": [
+            "Order a Custom Automobile"
+        ],
+        "incorrect_answers": [
+            "Order a set of dishes",
+            "Order a Technical Consultation",
+            "Order a Couch",
+            "Order a case of Laundry Soap"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Your customer has a catalog item for request VPN. They would like to adjust the cart layout for only the VPN item, so the Quantity field is not displayed. How would you meet this requirement?",
+        "correct_answers": [
+            "On the Catalog Item, Advanced View, unselect use cart layout, select no quantity"
+        ],
+        "incorrect_answers": [
+            "On the Cart Layout, Columns tab, unselect Quantity column",
+            "On the Catalog item, columns tab, unselect use cart layout, select no quantity",
+            "On the Catalog, Advanced View, unselect use cart layout, select no quantity",
+            "On the Catalog Item, Cart Layout Related List, set the Quantity record to Inactive"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "A manager wants to run a report on the computer catalog items, to see how many requests are being made for the add on extra memory, as compared with those requiring only the base memory. How would you meet this requirement?",
+        "correct_answers": [
+            "Build report on Requested Item table, Group by Variables for Computer > extra memory"
+        ],
+        "incorrect_answers": [
+            "Build report on SC Task Table, Group by Variables for Computer > Extra Memory",
+            "Build report on Task table, Group by Variables for Computer > Extra memory",
+            "Build report on request table, group by variables for computer > Extra memory",
+            "Build report on Catalog Item table, Group by Variables for Computer > Extra memory"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which record type would you use for an ask a question form that would generate an incident?",
+        "correct_answers": [
+            "record producer"
+        ],
+        "incorrect_answers": [
+            "order guide",
+            "linked item",
+            "catalog item",
+            "content item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following objects on the shopping cart widget can be displayed or hidden using Maintain Cart Layout settings?",
+        "correct_answers": [
+            "Quantity",
+            "Price"
+        ],
+        "incorrect_answers": [
+            "Requested by",
+            "Shipping Address"
+        ]
+    },
+	
+	{
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Your customer complains that when their users click on the Configuration Item magnifier from the incident form, that they are overwhelmed by the volume of CIs to choose from. They want to exclude certain types of CIs from the CI list on the incident, Problem, and Change forms. What do you recommend to your customer?",
+        "correct_answers": [
+            "Use the principal CI class checkbox to identify the CI classes they want visible on the incident, problem, change forms"
+        ],
+        "incorrect_answers": [
+            "Add a show field to the base cmdb table, check the show box on those CI records they want to display, make reference qualifier to display only the CIs with show = true",
+            "Create an access control to hide the unnecessary CIs from the itil users",
+            "Make a show/hide UI action to show only the desired CIs to the itil users"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or False: In the baseline configuration, SLAs use percentages of SLA duration to determine when to send Breach Warnings and Breach Notice notification.",
+        "correct_answers": [
+            "True"
+        ],
+        "incorrect_answers": ["False"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "What is the default number of days (integer) after which Resolved incidents are automatically closed?",
+        "correct_answers": [
+            "Seven days"
+        ],
+        "incorrect_answers": [
+            "One day",
+            "Five working days",
+            "Five days"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following does not describe the purpose of a CMDB?",
+        "correct_answers": [
+            "Inventory of IT assets in stock and available to users"
+        ],
+        "incorrect_answers": [
+            "Centrally managed and controlled 'system of record'",
+            "Repository to store IT service infrastructure components and relationships",
+            "Critical analysis and decision making tool to support impact analysis"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which type of record may be used to initiate the process to deploy a fix to an incident?",
+        "correct_answers": [
+            "Problem"
+        ],
+        "incorrect_answers": [
+            "Service Request",
+            "Change Request",
+            "Incident Resolution"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "How are additional comments and work notes intended to be used in notifications?",
+        "correct_answers": [
+            "Additional comments = communicate with end users, work notes = communicate with IT staff"
+        ],
+        "incorrect_answers": [
+            "Additional comments = communicate with IT staff, work notes = system generated log of updates",
+            "Additional comments = communicate with IT staff, work notes = communicate with end users",
+            "ServiceNow merely offers both so customers may choose whether to use one, both or neither"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which platform feature is used to track field value durations, such as the length of time an incident spent in each state or length of time an incident was assigned to each group?",
+        "correct_answers": [
+            "Metric"
+        ],
+        "incorrect_answers": [
+            "Database view",
+            "KPI",
+            "Audit"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "A user has the VIP field set to true on their User [sys_user] record. When that user is selected as the Caller on an Incident, which of the following statements are true in a baseline platform configuration? Select all that apply.",
+        "correct_answers": [
+            "The user's name is shown in red in the caller field",
+            "A VIP decoration is displayed next to the caller field"
+        ],
+        "incorrect_answers": [
+            "The priority field calculation is adjusted to increase priority by 1",
+            "SLA workflow conditions for VIP trigger additional notifications to the manager of the Assignment group"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In incident management, which of the following states are considered active?",
+        "correct_answers": [
+            "New, In Progress, On Hold"
+        ],
+        "incorrect_answers": [
+            "New, In Progress, On Hold, Resolved, Closed, Cancelled",
+            "New, In Progress, On Hold, Resolved",
+            "New, In Progress, On Hold, Resolved"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which field on a Configuration Item record may be used to expedite Incident routing and resolution?",
+        "correct_answers": [
+            "Support Group [support_group]"
+        ],
+        "incorrect_answers": [
+            "Due Date [due]",
+            "Maintenance Schedule [maintenance_schedule]",
+            "Approval Group [change_control]"
+        ]
+    },
+	
+{
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the base platform configuration, the caller reference field auto-complete functionality lists display name and email. The customer requests that the caller's department is listed as well. What element must be updated to satisfy this requirement?",
+        "correct_answers": [
+            "Ref_ac_columns dictionary attribute"
+        ],
+        "incorrect_answers": [
+            "Auto-Completer System Properties",
+            "Auto-completer Script include",
+            "Sys_popup view"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following is the purpose of related search results being displayed when an incident's short description is entered?",
+        "correct_answers": [
+            "Present the user with knowledge articles that may address their issue"
+        ],
+        "incorrect_answers": [
+            "Present automated orchestration scripts options to remotely resolve the user's issue",
+            "Present information about IT services the user may be interested in as a way to promote services",
+            "Present the user with a series of incident templates to expedite routing"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or False: Users with the itil role can delete an incident.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which mechanism is used to set the number of days (integer) after which resolved incidents are automatically closed?",
+        "correct_answers": [
+            "System Properties"
+        ],
+        "incorrect_answers": [
+            "Script include",
+            "Workflow",
+            "Business Rule"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "When can a user (who has no assigned roles in the system) close an Incident?",
+        "correct_answers": [
+            "When the user is the caller and the incident's state is resolved"
+        ],
+        "incorrect_answers": [
+            "When the user is the caller or on the watch list and the incident's state is resolved",
+            "When the user is the caller and the incident's state is not already closed",
+            "When the user is the caller and the incident's state is not already resolved"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Under which circumstances can a user with the itil role create a problem record from an incident record?",
+        "correct_answers": [
+            "When the incident is not closed and when there is not already an existing problem associated with the incident"
+        ],
+        "incorrect_answers": [
+            "An itil user can create a problem record from an incident any time",
+            "When there is not already an existing problem associated with the incident",
+            "When the incident is not closed"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which role is required to close a problem?",
+        "correct_answers": [
+            "Itil"
+        ],
+        "incorrect_answers": [
+            "Itil_admin",
+            "The system automatically closes problems",
+            "Problem Keins"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following statements reflects when the actual start and actual end date fields are populated on a change request? Actual start is set when the",
+        "correct_answers": [
+            "State changes to implement. Actual End is set when the state changes to review"
+        ],
+        "incorrect_answers": [
+            "First implementation change task is updated. Actual end date is set when the final implementation change task is closed",
+            "State changes to implement. Actual End is set when the state changes to review",
+            "State changes to Scheduled. Actual End is set when the State changes to Review"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline platform configuration, if a Change approver rejects an approval for a Normal Change, what will the State of the Change be set to?",
+        "correct_answers": [
+            "New"
+        ],
+        "incorrect_answers": [
+            "Closed complete",
+            "Assess",
+            "Rejected"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline platform configuration for an emergency change, XX is required before a change can be scheduled.",
+        "correct_answers": [
+            "CAB Approval"
+        ],
+        "incorrect_answers": [
+            "Peer approval",
+            "Justification, Change Plan, Test Plan, Blackout Plan",
+            "Configuration item identified"
+        ]
+    },
+
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Problem Management Investigation and Diagnosis activities include...?",
+        "correct_answers": [
+            "Conduct a Root Cause Analysis"
+        ],
+        "incorrect_answers": [
+            "Prioritize and Categorize the Problem",
+            "Obtain problem manager approval",
+            "Implement Change"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following is the GOAL of Problem Management?",
+        "correct_answers": [
+            "Prevent Problems and resulting incidents from happening, to eliminate recurring incidents, and to minimize the impact of incidents that cannot be prevented"
+        ],
+        "incorrect_answers": [
+            "Detect and correlate operational alerts or communications generated by infrastructure items to manage operations and prevent problems on the environment",
+            "Manage improvement to IT processes and services in order to increase efficiency, effectiveness and cost-effectiveness",
+            "Restore normal service operation as quickly as possible and minimize the adverse impact of incidents on business operations, thus ensuring that the best possible levels of service quality and availability are maintained"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or false: A problem can be created from an incident.",
+        "correct_answers": [
+            "True"
+        ],
+        "incorrect_answers": ["False"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In Problem Management, which element must be edited to modify the field mappings when Knowledge Articles are generated from Active Problem records?",
+        "correct_answers": [
+            "Problem to Knowledge Transform Map"
+        ],
+        "incorrect_answers": [
+            "Problem Util Script Include",
+            "Problem Create Knowledge Business Rule",
+            "Post News or Post Knowledge UI Actions"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the Baseline platform configuration, the three types of changes include",
+        "correct_answers": [
+            "Normal, Standard, Emergency"
+        ],
+        "incorrect_answers": [
+            "Normal, Routine, Urgent",
+            "Normal, Standard, Critical",
+            "Comprehensive, Routine, Emergency"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Poorly managed and unplanned Changes often create high volumes of",
+        "correct_answers": [
+            "Incidents"
+        ],
+        "incorrect_answers": [
+            "Knowledge Articles",
+            "Requests",
+            "Problems"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Select the ServiceNow functionality that may be used in the Assess phase of Change Management to evaluate the potential impact of a Change.",
+        "correct_answers": [
+            "Risk Assessment"
+        ],
+        "incorrect_answers": [
+            "Knowledge Management",
+            "Post-Implementation Review",
+            "Social Q&A"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "What is the minimum role required for a user to create an Emergency Change?",
+        "correct_answers": [
+            "Itil"
+        ],
+        "incorrect_answers": [
+            "CAB_manager",
+            "Change_manager",
+            "Itil_admin"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Change Tasks generated by the Change Request - Normal Change tasks workflow should include:",
+        "correct_answers": [
+            "All implementation tasks for a specific change"
+        ],
+        "incorrect_answers": [
+            "Automated tasks to be completed by the system scheduler",
+            "Approval and scheduling tasks for normal changes",
+            "Standard, administrative tasks common to all normal changes"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or False: In Change Management, manually added Change Tasks allow the Change owner to maintain accountability for a Change Request while assigning the individual implementation steps to other groups or individuals.",
+        "correct_answers": [
+            "True"
+        ],
+        "incorrect_answers": ["False"]
+    },
+	
+ {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following features are available through the Change Management - CAB Workbench application?",
+        "correct_answers": [
+            "Define filters to determine which changes appear on CAB meeting agendas",
+            "Determine CAB agenda with a specified amount of time allocated to each change",
+            "Invite delegates to CAB meetings to discuss specific changes"
+        ],
+        "incorrect_answers": [
+            "Update Work Notes on Changes based on meeting minutes added while a change is active agenda item",
+            "Assign changes",
+            "Approve changes in bulk (approve multiple changes at once)"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or false: configuration changes to the Change Management - CAB Workbench Application must be done in the global scope.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "The change task [change_tasks] table is extended from the ... table",
+        "correct_answers": [
+            "Task"
+        ],
+        "incorrect_answers": [
+            "Nothing, it is a base table",
+            "Change Request",
+            "Configuration Item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following is not a type of article feedback that may be submitted by users?",
+        "correct_answers": [
+            "Endorsed"
+        ],
+        "incorrect_answers": [
+            "Helpful (Yes/No)",
+            "Rate Article",
+            "Flag Article"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following represents how Knowledge Management Article publishing is managed?",
+        "correct_answers": [
+            "Each KB follows its own Publish and retire Workflow"
+        ],
+        "incorrect_answers": [
+            "Publish and retire workflows are set in the Knowledge Management System Properties",
+            "Any Article submitted is automatically published",
+            "Each Knowledge Article follows its own Publish and Retire workflow"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or False: ServiceNow is limited to a single KB for all users of the platform to access.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "How is access to Knowledge Articles administered?",
+        "correct_answers": [
+            "User Criteria and User Roles"
+        ],
+        "incorrect_answers": [
+            "Filter Conditions on the Knowledge Base",
+            "User Criteria and Entitlements",
+            "User Roles"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline platform configuration, which of the following is the minimum role required to delete a Configuration Item?",
+        "correct_answers": [
+            "itil_admin"
+        ],
+        "incorrect_answers": [
+            "ecmdb_admin",
+            "admin",
+            "itil"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Common recurring Catalog Variables can be grouped and standardized using...",
+        "correct_answers": [
+            "Variable sets"
+        ],
+        "incorrect_answers": [
+            "Insert and stay",
+            "Variable choice lists",
+            "Update sets"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following can be used as a 'no-code' alternative for some catalog client scripts to populate data on an item?",
+        "correct_answers": [
+            "Catalog data lookup"
+        ],
+        "incorrect_answers": [
+            "Catalog UI policy",
+            "Variable set",
+            "Catalog client script"
+        ]
+    },
+
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Best practices for using service catalog categories include...",
+        "correct_answers": [
+            "Organize categories in a way that your audience will understand"
+        ],
+        "incorrect_answers": [
+            "Use technical language that fulfillers will understand",
+            "Create many unique categories to help organize your catalog",
+            "Create as few categories as possible"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "An Order Guide can include multiple Items. Items have common variables, such as Shipping Location, and Requester. Which field on the Order Guide, when set to true, automatically copies the common variable values to corresponding variables on each included Item?",
+        "correct_answers": [
+            "Cascade variables"
+        ],
+        "incorrect_answers": [
+            "Global variables",
+            "Duplicate variables",
+            "Copy repeat variables"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or false: Similar to incident, requests are resolved first and then auto-closed by the system.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or false: User criteria is used to determine who may order items in a service catalog category.",
+        "correct_answers": [
+            "True"
+        ],
+        "incorrect_answers": ["False"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Primary tables associated with the Service Catalog begin with the prefix...",
+        "correct_answers": [
+            "Sc_"
+        ],
+        "incorrect_answers": [
+            "Rm_",
+            "Req_",
+            "Cat_"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "True or false: Every Catalog Item uses the same workflow to manage approvals.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following represents the overall lifecycle of a Request?",
+        "correct_answers": [
+            "Submittal > Approval > Fulfillment > Closure"
+        ],
+        "incorrect_answers": [
+            "Approval > Submittal > Delivery > Resolution",
+            "Submittal > Approval > Resolution > Closure",
+            "Approval > Submittal > Fulfillment > Closure"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following may NOT be published in a Service Catalog?",
+        "correct_answers": [
+            "Requested Item"
+        ],
+        "incorrect_answers": [
+            "Order Guide",
+            "Record Producer",
+            "Content Item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following Service Catalog Variable types are NOT supported in Mobile Interfaces?",
+        "correct_answers": [
+            "HTML",
+            "Label",
+            "UI Page",
+            "Container Start"
+        ],
+        "incorrect_answers": [
+            "Lookup Select Box",
+            "IP Address"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which type of records use the default Variables Editor (formatter) to display Catalog Item Variables on a form?",
+        "correct_answers": [
+            "Any type of record created from Record Producers"
+        ],
+        "incorrect_answers": [
+            "Requested Item records, Catalog Task records, all Tasks created by Record Producers",
+            "Tasks created from Record Producers, Requests, Requested Items",
+            "Requested Item records, Catalog Task records, Request records"
+        ]
+    },
+
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following is NOT a way Service Catalog Requests may be submitted in a baseline ServiceNow instance?",
+        "correct_answers": [
+            "From inbound email"
+        ],
+        "incorrect_answers": [
+            "From Service Portal",
+            "From Service Catalog",
+            "From an incident record"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Catalog UI policies may be applied to ...",
+        "correct_answers": [
+            "Catalog Items",
+            "Variable Sets"
+        ],
+        "incorrect_answers": [
+            "Catalog Categories",
+            "Service Catalogs"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Fill in the blanks: ... is primarily focused on the details needed to manage and operate hardware and software. ... is primarily focused on the financial aspects of hardware and software.",
+        "correct_answers": [
+            "Configuration Management, Asset Management"
+        ],
+        "incorrect_answers": [
+            "Asset Management, Configuration Management",
+            "IT Operations Management, IT Financial Management",
+            "IT Service Management, IT Financial Management"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which feature may be used to track trends related to the average resolution time by priority for Incidents compared to other customers in the same industry/number of users/region?",
+        "correct_answers": [
+            "Benchmarks"
+        ],
+        "incorrect_answers": [
+            "Performance Analytics",
+            "Reporting",
+            "Scheduled Reports"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "For an Incident, which of the following are used when calculating the value of the Business Duration field?",
+        "correct_answers": [
+            "SLA schedule"
+        ],
+        "incorrect_answers": [
+            "Incident State Duration metric",
+            "Incident Auto-close System property",
+            "Calendar duration"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following can be used to standardize the body of an outbound email notification?",
+        "correct_answers": [
+            "Email templates"
+        ],
+        "incorrect_answers": [
+            "Variable sets",
+            "Email clients",
+            "Inbound actions"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline instance configuration for incident management, when impact = 3 - Low and Urgency = 3 - Low, the Priority will be set to 5 - Planning. The customer requirement is to set the priority to 4 - Low, given these impact and urgency settings. Where should this be changed in the platform?",
+        "correct_answers": [
+            "Priority data lookup table"
+        ],
+        "incorrect_answers": [
+            "System property",
+            "Priority calculation business rule",
+            "Client script"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In problem management, when the state of a problem changes to closed/resolved, what updates are made to the associated incidents? (Assume associated incidents have a state of 'on hold' and 'on hold reason awaiting problem)",
+        "correct_answers": [
+            "The state of each associated incident is updated to resolved. Resolution code is set to solved (permanently). Resolution notes are populated with details from the problem close notes"
+        ],
+        "incorrect_answers": [
+            "The work notes field on each associated incident is updated with details from the problem close notes",
+            "The state of each incident is set to in progress to solved (permanently). Resolution notes are populated with details from the problem close notes"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline configuration a change cannot be created from a ...",
+        "correct_answers": [
+            "Knowledge article"
+        ],
+        "incorrect_answers": [
+            "Record producer",
+            "Incident",
+            "Problem"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "In the baseline configuration, only emergency changes require a post-implementation review.",
+        "correct_answers": [
+            "False"
+        ],
+        "incorrect_answers": ["True"]
+    },
+	
+	
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which process role is responsible for the smooth operation of the change management process within an organisation?",
+        "correct_answers": [
+            "Change Manager"
+        ],
+        "incorrect_answers": [
+            "Change Sponsor",
+            "Change Implementer",
+            "Change Advisory Board"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which of the following represents how Knowledge Management subscriptions and article versioning are enabled?",
+        "correct_answers": [
+            "Activation of the Knowledge Management Advanced Plugin"
+        ],
+        "incorrect_answers": [
+            "Customization to Knowledge Management",
+            "Features are enabled by default in baseline Jakarta Instances",
+            "Knowledge Base setting on each Knowledge Base"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "On a Service Catalog Item, a customer has a requirement that the start_date is before the end_date. Which approach is recommended to satisfy this requirement?",
+        "correct_answers": [
+            "Create a Catalog Client Script that triggers on-Submit of the Item"
+        ],
+        "incorrect_answers": [
+            "Create a Business Rule that runs on Insert or Update of the Item",
+            "Create a Validation Script and associate it to the Item",
+            "Create a Catalog Client UI Policy that triggers onLoad of the Item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "When creating a Variable to identify a location for a Catalog Item to be delivered, the most likely Variable Type to choose would be:",
+        "correct_answers": [
+            "Reference"
+        ],
+        "incorrect_answers": [
+            "Break",
+            "Select Box",
+            "Single Line of Text"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which one of the following processes begins after a user places an order in the Service Catalog?",
+        "correct_answers": [
+            "Request Fulfillment"
+        ],
+        "incorrect_answers": [
+            "Order Management",
+            "Catalog Fulfillment",
+            "Change Management"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which type of Service Catalog component allows a user to describe their needs, choose options, and then check out ordering multiple items at once according to their selections?",
+        "correct_answers": [
+            "Order Guide"
+        ],
+        "incorrect_answers": [
+            "Catalog Item",
+            "Execution Plan",
+            "Content Item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "For the majority of Catalog Items, the customer requires Quantity and Price to be displayed. However, for one Item, the customer would like to omit these two fields. Which of the following approaches should be used to satisfy this requirement?",
+        "correct_answers": [
+            "Set 'use cart layout' to false on the catalog item and set both to 'no quantity' and 'omit price in cart'"
+        ],
+        "incorrect_answers": [
+            "Write a Catalog Client Script for the item and use g_form.setDisplay() to hide each field",
+            "Cart Options are set using system properties and cannot be changed for individual items",
+            "Set both 'no quantity' and 'omit price in cart' to true on the catalog item"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Catalog UI Policies may be applied to:",
+        "correct_answers": [
+            "Catalog Item views"
+        ],
+        "incorrect_answers": [
+            "Target record views only",
+            "Catalog Item views, requested item views and catalog home pages",
+            "All form views and specified views"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which two fields are used to calculate priority on an incident?",
+        "correct_answers": [
+            "Impact",
+            "Urgency"
+        ],
+        "incorrect_answers": [
+            "Business Criticality and Urgency",
+            "VIP and Impact",
+            "Severity and Urgency"
+        ]
+    },
+    {
+        "type": "multiple",
+        "category": "ITSM",
+        "question": "Which one is the goal of incident management?",
+        "correct_answers": [
+            "Restore normal service operation as quickly as possible with minimal disruption to the business"
+        ],
+        "incorrect_answers": [
+            "An unplanned interruption to IT service or reduction of the quality of an IT service",
+            "Prevent disruptions to normal service operations to maximize user productivity",
+            "Conduct root-cause analysis to determine and resolve the cause of events"
+        ]
+    },
+	
+{
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In which phase of the incident management lifecycle do incidents get escalated?",
+    "correct_answers": [
+      "Investigation and diagnosis"
+    ],
+    "incorrect_answers": [
+      "Initial analysis and submission",
+      "Resolution and closure",
+      "Creation and classification"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements is true when an incident has several child incidents?",
+    "correct_answers": [
+      "Parent incident updates to State, Comments, Work Notes, Resolution Code are reflected in child incidents"
+    ],
+    "incorrect_answers": [
+      "No updates are synchronized between parent and child incidents",
+      "All updates to child incidents are reflected in the parent incident"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which feature can Service Desk Agents use to ensure that Knowledge Articles they attach to Incidents are Articles that are appropriate to share with callers?",
+    "correct_answers": [
+      "Contextual Search - Search As"
+    ],
+    "incorrect_answers": [
+      "Search Groups - Caller Restrictions",
+      "System Property - Restrict Articles to Callers",
+      "Global Search"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When referring to the State of an Incident in server-side Code (such as script include, Business Rule, UI Action) which method is the preferred way to refer to the state field value?",
+    "correct_answers": [
+      "If a constant has been defined, such as Incident.State.IN_PROGRESS, use the constant"
+    ],
+    "incorrect_answers": [
+      "Use the value of the choice option, such as 2 to refer to a state of in Progress",
+      "Use the getDisplayValue() method to retrieve the Label associated with the State field value"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following actions on the incident table require the itil_admin role?",
+    "correct_answers": [
+      "Delete incident"
+    ],
+    "incorrect_answers": [
+      "Update incident",
+      "Archive incident",
+      "Close incident"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In incident management, to impose pre-requisites or limits for moving from one state to another, where should the new logic be added?",
+    "correct_answers": [
+      "IncidentState Script Include"
+    ],
+    "incorrect_answers": [
+      "UI Actions",
+      "Access Controls",
+      "IncidentStateSNC Script Include"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the baseline platform configuration, which of these are required when closing a Normal change? Select all that apply",
+    "correct_answers": [
+      "Close Notes",
+      "Close Code"
+    ],
+    "incorrect_answers": [
+      "CAB Approval",
+      "Post-Implementation Review"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Under which circumstances is it appropriate to leave a problem record in a state of known error?",
+    "correct_answers": [
+      "The permanent fix is too costly and the documented workaround is sufficient"
+    ],
+    "incorrect_answers": [
+      "The root cause has not been established and approved",
+      "A vendor is actively investigating the problem",
+      "A change is pending implementation"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following ITIL terms refers to the cause of one or more incidents that is typically unknown at the time of detection?",
+    "correct_answers": [
+      "Problem"
+    ],
+    "incorrect_answers": [
+      "Unknown Error",
+      "Issue",
+      "Configuration Item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the basic configuration of Change Management, which fields are included when the Copy Change UI action is used to copy a Change Request?",
+    "correct_answers": [
+      "Configuration Item, Change Task, Backout Plan, Category"
+    ],
+    "incorrect_answers": [
+      "Change Task, Impact, Attachments, Planned Start Date, Risk",
+      "Backout Plan, Category, Change Type, Attachments, Work Notes",
+      "Configuration Item, Change Task, Approval, Risk, Attachments"
+    ]
+  },
+  
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "During which phase of the Change Management Lifecycle are the following activities performed?\n- Record the planned schedule for when the Change will take place\n- Perform risk assessment and evaluate risk\n- Describe relevant implementation plan, test plan and backout plan",
+    "correct_answers": [
+      "Creation and Scoping"
+    ],
+    "incorrect_answers": [
+      "Implementation",
+      "Closure",
+      "Approval"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The standard change template [std_change_record_producer] table is extended from the _______ table.",
+    "correct_answers": [
+      "Record Producer [sc_cat_item_producer]"
+    ],
+    "incorrect_answers": [
+      "Task [task]",
+      "Change Request [change_request]",
+      "Template [sys_template]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On the Change Record form, the Process Flow Formatter is used to ________.",
+    "correct_answers": [
+      "Show the current state of a change"
+    ],
+    "incorrect_answers": [
+      "Configure Change Management Lifecycle",
+      "Visually depict the Change Workflow",
+      "Show state history of a change"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a method for creating Knowledge Articles within ServiceNow?",
+    "correct_answers": [
+      "Generate from a Scheduled Report with a Target = Article"
+    ],
+    "incorrect_answers": [
+      "Generated from Incident or Problem records",
+      "Direct creation by a user with the Knowledge role",
+      "Import from a Microsoft Word Document"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: XML exports of Knowledge Articles include Article Text but DO NOT include attachments",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Under which circumstances would a Knowledge Base Owner set the Disable Category Editing field to true on a Knowledge Base?",
+    "correct_answers": [
+      "The categorization taxonomy for the Knowledge Base is formal and fairly stable"
+    ],
+    "incorrect_answers": [
+      "The Knowledge Base owner would like to prevent Contributors from editing articles in a Category",
+      "The categorization taxonomy for the Knowledge Base is informal and dynamic",
+      "The categorization taxonomy leverages the Category and Subcategory fields from Incident Management"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Knowledge Ratings are stored in the ___________ table.",
+    "correct_answers": [
+      "Knowledge Feedback [kb_feedback]"
+    ],
+    "incorrect_answers": [
+      "Knowledge Searches [ts_query_kb]",
+      "Knowledge [kb_knowledge]",
+      "Knowledge Base [kb_knowledge_base]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What are the primary record types in Configuration Management?",
+    "correct_answers": [
+      "Relationship Type and Configuration Item (CI)"
+    ],
+    "incorrect_answers": [
+      "Asset Item (AI) and Relationship Type",
+      "Business Service and Configuration Item (CI)",
+      "Asset Item (AI) and Configuration Item (CI)"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "To explore the entire hierarchy and table definitions of Configuration Management Database Classes, use ______",
+    "correct_answers": [
+      "CI Class Manager"
+    ],
+    "incorrect_answers": [
+      "Reports",
+      "Application Menus",
+      "Dependency View"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On a Catalog Item _______ can be used to validate data entered by users, populate fields dynamically or clear variables based on changes to other variables, while the user is editing the form.",
+    "correct_answers": [
+      "Catalog Client Scripts"
+    ],
+    "incorrect_answers": [
+      "Business Rules",
+      "Workflow",
+      "Catalog Data Lookups"
+    ]
+  },
+  
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: The Requested Item [sc_req_item] table is extended directly from the Task [task] table",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following components can be turned on or off in the service catalog cart layout?",
+    "correct_answers": [
+      "Quantity"
+    ],
+    "incorrect_answers": [
+      "Add to wishlist",
+      "Delete item",
+      "Calculate shipping"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: A requested item may be associated with one or more Requests",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In which situation would an order guide be used?",
+    "correct_answers": [
+      "Multiple items are typically ordered together"
+    ],
+    "incorrect_answers": [
+      "Administrators prefer user-friendly forms with questions and answers",
+      "Administrators choose not to use workflows",
+      "Items have a complex fulfillment process"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which field on the incident table automatically tracks the total elapsed time between when an incident is created until the time is resolved?",
+    "correct_answers": [
+      "Duration [calendar_duration]"
+    ],
+    "incorrect_answers": [
+      "Resolve Time [calendar_stc]",
+      "Business Resolve Time [business_stc]",
+      "Business Duration [business_duration]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Guided Setup provides step-by-step instructions for loading Foundational Data, which includes ____________",
+    "correct_answers": [
+      "Companies, Users, Locations"
+    ],
+    "incorrect_answers": [
+      "Users, Roles, SLAs",
+      "Groups, Group Member, Priorities",
+      "Companies, Incident Categories, Groups"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The Incident Task [incident_task] table is extended from the _________ table.",
+    "correct_answers": [
+      "Task [task]"
+    ],
+    "incorrect_answers": [
+      "Incident [incident]",
+      "Application File [sys_metadata]",
+      "CMDB [cmdb]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements are correct for Standard Changes. Select all that apply.",
+    "correct_answers": [
+      "Standard Changes are typically low risk and have detailed procedures",
+      "Standard changes can be automated"
+    ],
+    "incorrect_answers": [
+      "Standard Changes do not have change tasks",
+      "Standard Change procedures must be stored in the Knowledge Base"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: In the baseline platform configuration, a Configuration Item must be specified before approvals are requested for a change request.",
+    "correct_answers": [
+      "TRUE"
+    ],
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Problem Management, when using the Communicate Workaround Related Link, which of the following conditions must be met for the workaround to be communicated? Select all that apply",
+    "correct_answers": [
+      "Incident must be Active",
+      "Incident is associated with the Problem Record"
+    ],
+    "incorrect_answers": [
+      "The Workaround field must be updated immediately before the user selects Communicate Workaround",
+      "Incident is in a State On Hold with an On Hold Reason of Pending Problem"
+    ]
+  },
+
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: In CAB Workbench application, meeting notes and minutes are documented at the CAB meeting level?",
+    "correct_answers": [
+      "TRUE"
+    ],
+    "incorrect_answers": ["False"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Change Management, what is the purpose of the Risk Assessment Survey?",
+    "correct_answers": [
+      "Determine the Risk of the Change based on user responses to a Risk Assessment"
+    ],
+    "incorrect_answers": [
+      "Determine the Risk of the Change based on Risk Conditions",
+      "Survey CAB members to collectively assess Risk of each Change reviewed",
+      "Automatically survey the environment to analyze the continuity of services to assess Risk"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a goal of Change Management?",
+    "correct_answers": [
+      "Increase the number of Emergency Changes"
+    ],
+    "incorrect_answers": [
+      "Reduce the time to process standard repeatable Changes",
+      "Ensure that Changes are made in a planned and controlled manner",
+      "Reduce the number of incidents caused by Changes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following functions is NOT enabled by the Change Advisory Board (CAB) Workbench application?",
+    "correct_answers": [
+      "Provide video and chat capabilities during CAB meetings"
+    ],
+    "incorrect_answers": [
+      "View a calendar of planned changes",
+      "Define a schedule and related logics for CAB meetings",
+      "Document meeting notes and share with attendees"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Change Management, which record should be modified to restrict when a Change can move to a specific state?",
+    "correct_answers": [
+      "ChangeRequestStateModel Script Include"
+    ],
+    "incorrect_answers": [
+      "UI Action for the State Transition",
+      "ChangeRequestStateModelSNC Script Include",
+      "Change Request Script Include"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The Knowledge table is extended from",
+    "correct_answers": [
+      "No Table, it's a base table"
+    ],
+    "incorrect_answers": [
+      "Knowledge Base",
+      "Task",
+      "Configuration Item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following represents a benefit of implementing Knowledge Management?",
+    "correct_answers": [
+      "Deflecting the creation of incidents so users may help themselves with common issues"
+    ],
+    "incorrect_answers": [
+      "Provide continuous feedback loops to improve staff efficiency",
+      "Proactively suggest Knowledge Articles to users at key points in a process",
+      "Automatic routing of incidents to the appropriate Assignment Group"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Knowledge Management, which conditions must be met before the import from Word Icon / Button appears on the home page?",
+    "correct_answers": [
+      "User must meet conditions in can contribute user criteria for at least one KB or have the knowledge or knowledge_admin role"
+    ],
+    "incorrect_answers": [
+      "User must have one of the roles specified in Knowledge System Property",
+      "User must have Knowledge or knowledge_admin role",
+      "Knowledge base must have the enable article import field set to true"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: Database views must be used to report on Catalog Item Variables",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Knowledge Management, which conditions must be met before the Import from Word Icon / button appears on the Knowledge Management home page?",
+    "correct_answers": [
+      "The user must meet the conditions in the can contribute user criteria for at least one Knowledge Base or have the Knowledge or Knowledge_admin role"
+    ],
+    "incorrect_answers": [
+      "The user must have one of the roles specified in the Knowledge System Property 'List of roles (comma separated) that can import Knowledge Articles'",
+      "The user must have the knowledge or knowledge_admin role",
+      "The Knowledge base must have the Enable Article import field set to true"
+    ]
+  },
+  
+   {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: Database Views must be used to report on Catalog Item Variables",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["True"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In a Service Catalog, Content Items can include each of the following EXCEPT:",
+    "correct_answers": [
+      "Templates"
+    ],
+    "incorrect_answers": [
+      "Links to locations specified in an application navigation module",
+      "Links to knowledge articles",
+      "Cross references to Catalog content"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When does a State of On Hold pause an SLA?",
+    "correct_answers": [
+      "Depends upon the SLA Conditions"
+    ],
+    "incorrect_answers": [
+      "Never",
+      "Always"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following outlines the ways changes may be related to incidents?",
+    "correct_answers": [
+      "Incidents may be caused by changes. Investigation of incidents may indicate the need for a change"
+    ],
+    "incorrect_answers": [
+      "Incidents cause changes, Investigation of Changes may indicate the need for Incidents to be generated",
+      "A Change is required to investigate the cause of an incident",
+      "Incidents and changes are separate processes that have little interaction"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT included in the Incident Management Lifecycle?",
+    "correct_answers": [
+      "Approval and Fulfillment"
+    ],
+    "incorrect_answers": [
+      "Resolution and Closure",
+      "Investigation and Diagnosis",
+      "Creation and Classification"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following outlines the ways changes may be related to incidents?",
+    "correct_answers": [
+      "Incidents may be caused by changes. Investigation of incidents may indicate the need for a change"
+    ],
+    "incorrect_answers": [
+      "Incidents cause changes, Investigation of changes may indicate the need for incidents to be granted",
+      "A Change is required to investigate the cause of an incident",
+      "Incidents and Changes are separate processes that have little interaction"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements are correct for standard changes and standard change templates? Choose 2",
+    "correct_answers": [
+      "Templates can be used only for standard changes",
+      "Standard Change do not require approvals"
+    ],
+    "incorrect_answers": [
+      "Standard change templates cannot include standard tasks",
+      "Creation of a standard change template requires approval"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: Within a catalog item, a 'Container Split' Formatter is required between 'Container Start' and 'Container End' to split variables into columns",
+    "correct_answers": [
+      "TRUE"
+    ],
+    "incorrect_answers": ["FALSE"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a consideration when determining the need for multiple Service Catalogs?",
+    "correct_answers": [
+      "Size of the Company"
+    ],
+    "incorrect_answers": [
+      "Services and Types of Service",
+      "Audience",
+      "Delegation of Catalog Administration"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: Once an Incident is placed in a 'Resolved' State, the caller may no longer re-open the incident.",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["TRUE"]
+  },
+  
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When an end-user with no roles in the Platform submits an incident using the self-service interface of service portal, related search results automatically display search results from the knowledge base and service catalog. The related search results are a form of:",
+    "correct_answers": [
+      "Incident deflection"
+    ],
+    "incorrect_answers": [
+      "xxx Marketing",
+      "Live agent intervention",
+      "Incident avoidance"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When the caller field is populated on the incident form, the user can hover over the reference icon to see fields on the user table. If no sys_popupview is defined for the user table, which view is used instead?",
+    "correct_answers": [
+      "Default"
+    ],
+    "incorrect_answers": [
+      "Reference view",
+      "User",
+      "Itil"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a typical method to propose a new standard change?",
+    "correct_answers": [
+      "Toggle the template bar on the existing change and click + to add a new template"
+    ],
+    "incorrect_answers": [
+      "In the standard change proposals table click new and submit the record",
+      "Right click on an existing change and select propose a standard change",
+      "In the standard change catalog under template management select propose a new standard change template"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following group authorizes changes?",
+    "correct_answers": [
+      "Change Advisory Board (CAB)"
+    ],
+    "incorrect_answers": [
+      "Approval Determination Board (ADB)",
+      "Upper Management",
+      "Board of Directors"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In change management, the Risk calculator is used to:",
+    "correct_answers": [
+      "Determine the risk and impact of the change based on risk conditions"
+    ],
+    "incorrect_answers": [
+      "Determine the priority of a change",
+      "Determine just risk of the change based on risk conditions",
+      "Determine the risk of the change based on responses to risk assessment"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements is true when the change management risk assessment plugin is enabled?",
+    "correct_answers": [
+      "Both the risk calculator and risk assessment are used to determine risk for change"
+    ],
+    "incorrect_answers": [
+      "Risk is automatically calculated on update of a change",
+      "Risk assessment replaces the risk calculator to determine risk for change",
+      "A risk assessment is required for all normal and emergency changes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: Change conflict detection scheduled jobs run with increasing frequency as the change approaches the planned state date",
+    "correct_answers": [
+      "TRUE"
+    ],
+    "incorrect_answers": ["FALSE"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: In knowledge management, user criteria may be established at both the knowledge base and the article level to control who can read / cannot read as well as who can contribute / cannot contribute",
+    "correct_answers": [
+      "TRUE"
+    ],
+    "incorrect_answers": ["FALSE"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A customer has a requirement to include a catalog item to order Microsoft Access in several categories that users can find it easily. What is the best way to do this?",
+    "correct_answers": [
+      "Add additional categories in the catalog item categories related list"
+    ],
+    "incorrect_answers": [
+      "Copy the catalog item and associate the copy with each category",
+      "List the categories in the catalog item’s description field",
+      "Build the item as an order guide"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following service catalog records may serve as a container for multiple requested items?",
+    "correct_answers": [
+      "Determine who can see categories and items"
+    ],
+    "incorrect_answers": [
+      "Service catalog task",
+      "Pre-fill user preferences on catalog order forms",
+      "Replace access controls to provide security to requests"
+    ]
+  },
+
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which is the base class for Configuration Management Database?",
+    "correct_answers": [
+      "Base Configuration Item [cmdb]"
+    ],
+    "incorrect_answers": [
+      "Base Item [cmdb_base_item]",
+      "Configuration Item [cmdb_ci]",
+      "Asset [asset]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When Change Management - Risk Management is enabled, which of the following statements reflects how the risk of Change request will be set?",
+    "correct_answers": [
+      "Risk will be set to the highest Risk value of evaluated by Risk Calculation Assessment"
+    ],
+    "incorrect_answers": [
+      "Risk will be set to the average Risk value of evaluated by Risk Calculation and Risk Assessment",
+      "Risk will be set to the lowest Risk value of evaluated by Risk Calculation and Risk Assessment"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which KPI can be influenced by effective Problem Management? Select all that apply.",
+    "correct_answers": [
+      "Average time to close a problem",
+      "Percentage of high priority problems"
+    ],
+    "incorrect_answers": [
+      "Percentage of Incidents resolved by first contact",
+      "Average time to resolve a high priority incident"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In Problem Management, which role is required to delete a Problem record?",
+    "correct_answers": [
+      "Itil_admin"
+    ],
+    "incorrect_answers": [
+      "Nobody",
+      "Problem",
+      "Itil"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the name of the view that can be configured to control the fields displayed when a user hovers over the reference icon next to a reference field?",
+    "correct_answers": [
+      "Sys_popup"
+    ],
+    "incorrect_answers": [
+      "Reference_view",
+      "Mobile",
+      "Tool_tip"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following Service Catalog records may serve as a container for multiple catalog items selected by the user prior to ordering those items?",
+    "correct_answers": [
+      "Shopping Cart"
+    ],
+    "incorrect_answers": [
+      "Request item",
+      "Request",
+      "Basket"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On an Incident, which of the following conditions will trigger the reopen count field value to be incremented?",
+    "correct_answers": [
+      "State changes from Resolved to On Hold"
+    ],
+    "incorrect_answers": [
+      "Update to an associated problem record",
+      "Submission of an incident by the same caller with an identical short description",
+      "Assigned Group Changes from Service Desk to Software Group"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "TRUE or FALSE: In the baseline configuration, when a Knowledge Article gets flagged by a user as being incomplete or incorrect, a notification is sent to the Knowledge Base owner.",
+    "correct_answers": [
+      "FALSE"
+    ],
+    "incorrect_answers": ["TRUE"]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A parent Incident is updated to reflect a new Assignment Group, Work Notes, and related Problem. Which responding field updates to child incidents include?",
+    "correct_answers": [
+      "Work Notes"
+    ],
+    "incorrect_answers": [
+      "Assignment Group, Work Notes, related Problem",
+      "Assignment Group and Work Notes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A record is added to the ____ table each time a Knowledge Article is viewed. The record includes fields to identify the user who viewed the article and whether the article was attached to a task.",
+    "correct_answers": [
+      "Knowledge Use"
+    ],
+    "incorrect_answers": [
+      "Knowledge Feedback",
+      "Knowledge",
+      "Knowledge Search"
+    ]
+  },
+
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When should a Problem be put in the state of known error?",
+    "correct_answers": [
+      "The cause of the Problem has been determined, but there is no permanent fix"
+    ],
+    "incorrect_answers": [
+      "The Problem has been acknowledged, but a root cause has not yet been identified",
+      "A fix for the Problem is pending implementation of a change",
+      "The Problem is actively being investigated, but a workaround has been identified"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which one of the following is proper syntax for accessing values of variables from a record producer script field?",
+    "correct_answers": [
+      "producer.variable_name"
+    ],
+    "incorrect_answers": [
+      "g_form.getReference('variable_name')",
+      "g_form.getVariable('variable_name')",
+      "current.variable_name"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the name of the table that links users to roles?",
+    "correct_answers": [
+      "sys_user_has_role"
+    ],
+    "incorrect_answers": [
+      "sys_user",
+      "sys_user_role"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of these is NOT a foundation data table?",
+    "correct_answers": [
+      "cmn_company"
+    ],
+    "incorrect_answers": [
+      "cmn_location",
+      "core_company",
+      "cmn_department"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What do you call the dynamic grouping of configuration items (CIs), based on common criteria, such as all web servers in Detroit?",
+    "correct_answers": [
+      "Dynamic CI group"
+    ],
+    "incorrect_answers": [
+      "Common CI group",
+      "Dynamic CI class",
+      "Principal CI class",
+      "Managed CI class"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is not a CSDM 4.0 domain?",
+    "correct_answers": [
+      "Purchase"
+    ],
+    "incorrect_answers": [
+      "Design",
+      "Foundation",
+      "Sell / Consume"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "CMDB Groups, Product Models, Contracts and Common Data belong to which domain?",
+    "correct_answers": [
+      "Foundation"
+    ],
+    "incorrect_answers": [
+      "Design",
+      "Sell / Consume",
+      "Build"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Services that are not yet operational or available for use are in which phase?",
+    "correct_answers": [
+      "Pipeline"
+    ],
+    "incorrect_answers": [
+      "Development",
+      "Catalog",
+      "Retired"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What kind of service is published to service owners that underpins a business or service application?",
+    "correct_answers": [
+      "Technical service"
+    ],
+    "incorrect_answers": [
+      "Application service",
+      "Business service",
+      "Commerce service"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is derived from a service and defines specific business needs and performance levels?",
+    "correct_answers": [
+      "offering"
+    ],
+    "incorrect_answers": [
+      "child service",
+      "commitment",
+      "service metric definition"
+    ]
+  },
+  
+  
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which catalog type should be used for 'Report an outage'?",
+    "correct_answers": [
+      "Record Producer"
+    ],
+    "incorrect_answers": [
+      "Order guide",
+      "Content Item",
+      "Catalog Item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "User criteria can be applied to which two components?",
+    "correct_answers": [
+      "Catalog categories",
+      "Catalog items"
+    ],
+    "incorrect_answers": [
+      "Service catalog",
+      "Catalog homepage"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A Catalog UI Policy cannot be applied to which of the following?",
+    "correct_answers": [
+      "Cart layout"
+    ],
+    "incorrect_answers": [
+      "Catalog item view",
+      "Catalog tasks",
+      "Requested items"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A service level agreement can be applied to which of the following?",
+    "correct_answers": [
+      "Request (REQ)",
+      "Catalog Item (RITM)",
+      "Catalog task (SCTASK)"
+    ],
+    "incorrect_answers": [
+      "Catalog (sc_catalog)"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The incident variable editor is used to display variables on which of these records?",
+    "correct_answers": [
+      "incidents created via record producer"
+    ],
+    "incorrect_answers": [
+      "incidents created via now mobile",
+      "catalog items",
+      "catalog tasks"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which role has the ability to delete a knowledge base?",
+    "correct_answers": [
+      "a knowledge base cannot be deleted"
+    ],
+    "incorrect_answers": [
+      "admin",
+      "knowledge_admin",
+      "knowledge_manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What happens if there are no user criteria records assigned on the 'can read' related list of a knowledge base?",
+    "correct_answers": [
+      "The knowledge base is open to the public"
+    ],
+    "incorrect_answers": [
+      "Only knowledge base managers and owner have access",
+      "The knowledge base will become inactive"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Where is the incident priority matrix configured?",
+    "correct_answers": [
+      "Priority data lookup table"
+    ],
+    "incorrect_answers": [
+      "Incident properties module",
+      "Incident prioritiy action script",
+      "Incident priority UI policy"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the default time for incidents in a resolved state to automatically move to the closed state?",
+    "correct_answers": [
+      "7 days"
+    ],
+    "incorrect_answers": [
+      "3 days",
+      "30 days",
+      "90 days"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When do SLA percentage timers automatically trigger breach warning notifications?",
+    "correct_answers": [
+      "50% duration",
+      "75% duration",
+      "90% duration"
+    ],
+    "incorrect_answers": [
+      "25% duration"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Where or how are the roles that are allowed to re-analyze a problem defined?",
+    "correct_answers": [
+      "Problem Properties module"
+    ],
+    "incorrect_answers": [
+      "Access Control Lists (ACL)",
+      "UI Action condition",
+      "Problem state utils script include"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What defines when a problem record can automatically move from the new to assess state?",
+    "correct_answers": [
+      "Update Problem State to Assess business rule"
+    ],
+    "incorrect_answers": [
+      "Problem State UI Policy",
+      "Problem State UI Action",
+      "Problem State Utils Script include"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following problem task types are available in the ServiceNow baseline?",
+    "correct_answers": [
+      "General",
+      "Root Cause Analysis"
+    ],
+    "incorrect_answers": [
+      "Common",
+      "Implement"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The unauthorized change process will only trigger if the CI is part of what?",
+    "correct_answers": [
+      "application service"
+    ],
+    "incorrect_answers": [
+      "business service",
+      "business product",
+      "technical service"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which role can create and modify a change model?",
+    "correct_answers": [
+      "change_manager"
+    ],
+    "incorrect_answers": [
+      "itil_admin",
+      "change_admin",
+      "sn_change_model_manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What defines the requirements for a change model to move from one state to another?",
+    "correct_answers": [
+      "Transition conditions"
+    ],
+    "incorrect_answers": [
+      "Business rules",
+      "Lifecycle model requirements",
+      "Change update script"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which release phase defines the specific plans for the release and supporting the fulfilment of required change requests?",
+    "correct_answers": [
+      "Release planning"
+    ],
+    "incorrect_answers": [
+      "Release definition",
+      "Approval",
+      "Build and test"
+    ]
+  },
+  
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A parent Incident is updated to reflect a new Assignment Group, Work Notes, and related Problem. Corresponding field updates to child Incidents include ________.",
+    "correct_answers": [
+      "No updates are made to child Incidents"
+    ],
+    "incorrect_answers": [
+      "Assignment Group, Work Notes, and related Problem",
+      "Assignment Group and Work Notes",
+      "Work Notes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When should a Problem be put in a State of Known Error?",
+    "correct_answers": [
+      "The cause of the Problem has been determined, but there is no permanent fix"
+    ],
+    "incorrect_answers": [
+      "The Problem has been acknowledged, but a root cause has not yet been identified",
+      "A fix for the Problem is pending implementation of a Change",
+      "The Problem is actively being investigated, but a workaround has been identified"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A record is added to the _______ table each time a Knowledge article is viewed. The record includes fields to identify the user who viewed the article and whether the article was attached to a Task.",
+    "correct_answers": [
+      "Knowledge Use [kb_use]"
+    ],
+    "incorrect_answers": [
+      "Knowledge Feedback [kb_feedback]",
+      "Knowledge [kb_knowledge]",
+      "Knowledge Search Log [ts_query_kb]"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A customer has a requirement to allow staff to copy existing Changes. However, they want to add the Work Notes List field to the fields included in the copy operation. Which approach is recommended to satisfy this requirement?",
+    "correct_answers": [
+      "Validate that the 'Enable Copy Change feature' property is set to true and add the field to the 'List of attributes (comma-separated) that will be copied from the originating change' property"
+    ],
+    "incorrect_answers": [
+      "Edit the code in the Copy Change UI Action to include the new field and validate that the UI Action is Active",
+      "Edit the ChangeUtils Script Include to add the new field to the CHANGE_REQUEST_DEFAULT_ATTR_VALUE Constant that defines fields to include in Copy operation",
+      "Override the Dictionary attributes for the Work Notes List field on Change to add the 'Include in Record Copy' attribute set to true"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which one of the following is proper syntax for accessing values of variables from a Record Producer script field?",
+    "correct_answers": [
+      "producer.variable_name"
+    ],
+    "incorrect_answers": [
+      "g_form.getReference('variable_name')",
+      "g_form.getVariable('variable_name')",
+      "current.variable_name"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which field on a Configuration Item (CI) may be used to route Incidents to the appropriate group to quickly resolve Incidents related to the CI?",
+    "correct_answers": [
+      "Support Group"
+    ],
+    "incorrect_answers": [
+      "Assignment Group",
+      "Change Control",
+      "Managed By"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which application does NOT integrate with Continual Improvement Management?",
+    "correct_answers": [
+      "Knowledge Management"
+    ],
+    "incorrect_answers": [
+      "Incident Management",
+      "Governance, Risk, and Compliance (GRC)",
+      "Configuration Management Database (CMDB)"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the Service Catalog Rest API which methods can now use the parent_id and parent_table parameters in the response body? Choose 4.",
+    "correct_answers": [
+      "checkout_guide",
+      "submit_order",
+      "submit_producer",
+      "checkout"
+    ],
+    "incorrect_answers": [
+      "submit_item",
+      "remove_item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which state is NOT added when activating the Problem Management Best Practice - Madrid State Mode plugin?",
+    "correct_answers": [
+      "Draft"
+    ],
+    "incorrect_answers": [
+      "New",
+      "Assess",
+      "Fix in Progress",
+      "Closed",
+      "Resolved"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which statements are TRUE regarding the coaching application? Choose 3.",
+    "correct_answers": [
+      "Coaching integrates with CIM app",
+      "Coaching requires separate subscription",
+      "Coaching provides the following dashboards: Coaching dashboard, Manager Dash, and Trainee Dash"
+    ],
+    "incorrect_answers": [
+      "Coaching is a new app in Madrid",
+      "Coaching can be activated by system Administrators"
+    ]
+  },{
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On the Problem form in Agent Workspace, which function is not supported?",
+    "correct_answers": [
+      "State transitions"
+    ],
+    "incorrect_answers": [
+      "Creating new problems",
+      "Minor updates of the problem record",
+      "State transitions"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which statement is NOT true about Change Approval policies?",
+    "correct_answers": [
+      "change approval policies use the platform feature Decision tables to evaluate approvals"
+    ],
+    "incorrect_answers": [
+      "For group approvals, you can configure the approval policy to wait for the first response or all responses.",
+      "When upgrading from a previous release version, the Normal and Emergency Change workflows are Updated.",
+      "The Change Approval Policy workflow activity replaces the Approval - Group workflow activity"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What functions are available on the new mobile app for Incident Management?",
+    "correct_answers": [
+      "Add comments.",
+      "View incidents assigned to you or your group.",
+      "Reassign incidents."
+    ],
+    "incorrect_answers": [
+      "View related problems.",
+      "Close incidents."
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The Refresh Impacted Services UI action is available for?",
+    "correct_answers": [
+      "All tables listed under the Refresh Impacted Services property"
+    ],
+    "incorrect_answers": [
+      "All tables extending task",
+      "The Change Request [change_request] table",
+      "The Incident [incident] table"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "If an ESS user reopens an incident with child incidents, the following occurs:",
+    "correct_answers": [
+      "The parent incident is reopened but not the child incidents"
+    ],
+    "incorrect_answers": [
+      "The parent incident is reopened with an option to reopen any child incidents",
+      "Both the parent and child incidents are reopened",
+      "A copy of the parent and child incidents is created"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "On the Change Schedules page, which is NOT a category you can find schedules arranged under?",
+    "correct_answers": [
+      "Group Schedules"
+    ],
+    "incorrect_answers": [
+      "Pinned Schedules",
+      "Your Schedules",
+      "All Schedules"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "For Catalog Items, the default quantity choice is",
+    "correct_answers": [
+      "1-10"
+    ],
+    "incorrect_answers": [
+      "1-15",
+      "1-20",
+      "1-5"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "ITIL users are now able to see the dependency view for a business service on?",
+    "correct_answers": [
+      "All Of the above"
+    ],
+    "incorrect_answers": [
+      "Change",
+      "Incident",
+      "Problem"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What plugin needs to be activated in order to run quick start tests for Change Management?",
+    "correct_answers": [
+      "com.snc.chg_atf"
+    ],
+    "incorrect_answers": [
+      "com.snc.bestpractice.change_atf",
+      "com.glide.automated_testing_impl.change_management",
+      "com.snc.change_management.soc",
+      "com.snc.change_management.atf"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which Of the following are available 'Wait for' values when defining an approval definition for change policy?",
+    "correct_answers": [
+      "All response",
+      "First response",
+      "Last response"
+    ],
+    "incorrect_answers": [
+      "Percentage of users",
+      "Number of users"
+    ]
+  },
+
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When unplanned activity occurs on a configuration item that is part of an application service, what event gets triggered to identify the change as unauthorised?",
+    "correct_answers": [
+      "Change.ci_unauthorized"
+    ],
+    "incorrect_answers": [
+      "Change.ci_unplanned",
+      "Snc.change_request.disco.ci.unplanned",
+      "Ci.change.unplanned",
+      "Ci.change.unauthorized"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What feature becomes available on the major incident workbench when the com.glideapp.itom.snac is activated?",
+    "correct_answers": [
+      "Alert card"
+    ],
+    "incorrect_answers": [
+      "Event log",
+      "Health card",
+      "Communication tasks",
+      "Special handling notes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When does a State of On Hold pause an SLA?",
+    "correct_answers": [
+      "Depends upon the SLA conditions"
+    ],
+    "incorrect_answers": [
+      "Never",
+      "Always"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Who can delete an incident?",
+    "correct_answers": [
+      "itil",
+      "itl_admin"
+    ],
+    "incorrect_answers": [
+      "admin",
+      "incident manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What are the conditions should be true to update the incident when 'Communicate Fix' is selected from the problem? Select all that apply.",
+    "correct_answers": [
+      "Incident is linked to problem with status 'On Hold' and 'Pending Problem'.",
+      "Problem is linked to change with status 'On Hold' and 'Pending Change'.",
+      "Workaround is created",
+      "Fix notes and cause details are documented"
+    ],
+    "incorrect_answers": []
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the ITIL term for the cause of one or more incidents?",
+    "correct_answers": [
+      "problem"
+    ],
+    "incorrect_answers": [
+      "issue",
+      "unknown error",
+      "incident"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Parent incident to child incident updates -",
+    "correct_answers": [
+      "resolution codes, work notes, state, from parent to child"
+    ],
+    "incorrect_answers": [
+      "all from parent to child",
+      "all from child to parent",
+      "never"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "The caller field allows search to the User Name and Email, your client has a requirement to include the department as well. How will you go about in meeting this requirement?",
+    "correct_answers": [
+      "Ref_ac_columns Dictionary Attribute"
+    ],
+    "incorrect_answers": [
+      "UI Policy",
+      "sys_popup",
+      "client scripts"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When will Conflict detection run: choose all that apply",
+    "correct_answers": [
+      "manually run",
+      "when CI is changed",
+      "when priority is changed"
+    ],
+    "incorrect_answers": [
+      "when affected services are changed",
+      "when impacted services are changed",
+      "when planned start/end changed"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which is NOT a method to create changes from?",
+    "correct_answers": [
+      "knowledge article"
+    ],
+    "incorrect_answers": [
+      "catalog item",
+      "incident",
+      "problem"
+    ]
+  },
+  
+{
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which is not a method to submit catalog item request?",
+    "correct_answers": [
+      "from inbound email"
+    ],
+    "incorrect_answers": [
+      "from incident",
+      "from service portal"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What does the Risk calculator calculate?",
+    "correct_answers": [
+      "risk and impact of the change based on risk conditions"
+    ],
+    "incorrect_answers": [
+      "just risk",
+      "risk and impact of the change based on the survey",
+      "one more option"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Change management lifecycle steps in order",
+    "correct_answers": [
+      "Creation and Scoping -> Approval -> Implementation -> Closure"
+    ],
+    "incorrect_answers": [
+      "Creation and Scoping -> Implementation -> Review -> Closure",
+      "Creation and Scoping -> Approval -> Control -> Closure",
+      "Creation and Scoping -> Approval -> Implementation -> Resolution -> Closure"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "You want to control the input to the form dynamically based on the user selection while working on the form such as clearing the messages, populating the values, how do you do it?",
+    "correct_answers": [
+      "Catalog Client scripts"
+    ],
+    "incorrect_answers": [
+      "Catalog data lookups",
+      "UI policies",
+      "Script includes"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Active states in Incident.",
+    "correct_answers": [
+      "New, In Progress, On hold, Resolved"
+    ],
+    "incorrect_answers": [
+      "New, In Progress, On hold, Resolved, Closed, Cancelled",
+      "New, In Progress, Resolved"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which fields should be of variable type reference?",
+    "correct_answers": [
+      "Users",
+      "Departments",
+      "Locations",
+      "Cost centre"
+    ],
+    "incorrect_answers": [
+      "Country"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the baseline configuration for Service Catalog workflows, which of the following statements are true? Select all that apply.",
+    "correct_answers": [
+      "Requests with a value over $1000 require manager approval",
+      "Approvals will be skipped if there are no members in the approval group"
+    ],
+    "incorrect_answers": [
+      "Execution plans are used instead of Workflows",
+      "All Requested Items require manager approval"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "For the majority of Catalog Items, the customer requires Quantity and Price to be displayed. However, for one Item, the customer would like to omit these two fields. Which of the following approaches should be used to satisfy this requirement?",
+    "correct_answers": [
+      "Set both 'No Quantity' and 'Omit Price in Cart' to true on the catalog item.",
+      "Set 'Use cart Layout' to false on the Catalog Item and set both 'No Quantity' and 'Omit Price in Cart' to true."
+    ],
+    "incorrect_answers": [
+      "Cart options are set using system properties and cannot be changed for individual items.",
+      "Write a catalog client script for the item and use g_form.setDisplay() to hide each field."
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following DOES NOT describe the purpose of CMDB?",
+    "correct_answers": [
+      "Inventory of IT assets in stock and available to Users"
+    ],
+    "incorrect_answers": [
+      "Repository to store IT Service infrastructure components and relationships",
+      "Centrally managed and controlled 'system of record'",
+      "Critical analysis and decision-making tool to support impact analysis"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following components can be turned on or off in the Service Catalog Cart Layout?",
+    "correct_answers": [
+      "Quantity",
+      "Add to Wish List (and Quantity)"
+    ],
+    "incorrect_answers": [
+      "Delete Item",
+      "Calculate Shipping"
+    ]
+  },
+  
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In knowledge management, which conditions must be met before the 'Import from Word' icon/button appears on the Knowledge management Home page?",
+    "correct_answers": [
+      "The user must meet the conditions in the Can Contribute User Criteria for at least one Knowledge Base OR have the knowledge or Knowledge_admin role.",
+      "The Knowledge base must have the Enable Article Import field set to True"
+    ],
+    "incorrect_answers": [
+      "The user must have the knowledge or knowledge_admin role",
+      "The user must have one of the roles specified in the Knowledge System Property 'List of roles (comma separated) that can import Knowledge Articles'"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the name of the process that is executed when a Service Catalog Order is submitted?",
+    "correct_answers": [
+      "Request Fulfillment"
+    ],
+    "incorrect_answers": [
+      "Request Management",
+      "Order Management",
+      "Work Order Management"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "When the priority and assignment group changes on the parent incident, what changes on the child incident(s)?",
+    "correct_answers": [
+      "nothing"
+    ],
+    "incorrect_answers": [
+      "priority and assignment group",
+      "priority only",
+      "assignment group only"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the base table for configuration management?",
+    "correct_answers": [
+      "cmdb"
+    ],
+    "incorrect_answers": [
+      "cmdb_ci",
+      "some other answers"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What do you need to do to show a variable that is on the catalog item onto the catalog task?",
+    "correct_answers": [
+      "cascade"
+    ],
+    "incorrect_answers": [
+      "checkbox",
+      "other answers"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "How does the base system know which workflow to run for change?",
+    "correct_answers": [
+      "from the type field"
+    ],
+    "incorrect_answers": [
+      "other answers"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What has to be in place to have a workaround communicated to incidents (choose 3)?",
+    "correct_answers": [
+      "incident needs to be linked to the problem",
+      "workaround field needs to be populated on problem",
+      "click on the Communicate Workaround related link"
+    ],
+    "incorrect_answers": [
+      "incident needs to be in open state"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "User criteria can be used to restrict access to?",
+    "correct_answers": [
+      "item & category"
+    ],
+    "incorrect_answers": [
+      "item & catalog",
+      "others"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the best practice when referring to incident state 'In Progress' in script?",
+    "correct_answers": [
+      "incidentstatehandler.INPROGRESS"
+    ],
+    "incorrect_answers": [
+      "state = 2",
+      "other options"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What are the 3 ways to create a standard change proposal?",
+    "correct_answers": [
+      "from the context menu of an existing change",
+      "Change > Standard Change > Standard Change Catalog > Template Management > Propose a new Standard Change Template",
+      "Clicking the New button from the My Proposals or Open Proposals menu"
+    ],
+    "incorrect_answers": [
+      "some other wrong answer"
+    ]
+  },
+
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In the base system, when is the first notification sent for an SLA?",
+    "correct_answers": [
+      "50%"
+    ],
+    "incorrect_answers": [
+      "25%",
+      "75%",
+      "100%"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A Post Implementation Review is done on which types of change?",
+    "correct_answers": [
+      "Standard, Normal and Emergency"
+    ],
+    "incorrect_answers": [
+      "Normal only",
+      "Normal and Emergency",
+      "Emergency only"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the default number of days that an incident will automatically be closed from resolved?",
+    "correct_answers": [
+      "One day"
+    ],
+    "incorrect_answers": [
+      "Three days",
+      "Five days",
+      "Five business days"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Change the status of incident flow:",
+    "correct_answers": [
+      "IncidentState script include"
+    ],
+    "incorrect_answers": [
+      "UI Action",
+      "IncidentStateSNC script include"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "A parent incident is updated to reflect a new Assignment Group, Work Notes, and related Problem. Corresponding field updates to child Incidents include ___.",
+    "correct_answers": [
+      "Work Notes"
+    ],
+    "incorrect_answers": [
+      "Assignment Group, Work Notes, and related Problem",
+      "Assignment Group and Work Notes",
+      "No updates are made to child Incidents"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following roles can delete a CAB definition?",
+    "correct_answers": [
+      "None of the listed answers"
+    ],
+    "incorrect_answers": [
+      "Change manager",
+      "itil_admin",
+      "cab_manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which script include should be modified in order to impose limits when moving a problem task from one state to another?",
+    "correct_answers": [
+      "ProblemTaskStateUtils"
+    ],
+    "incorrect_answers": [
+      "ProblemTaskUtils",
+      "ProblemTaskChangeState",
+      "ProblemTaskState"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "In record producers, mapping to encrypted fields is supported?",
+    "correct_answers": [
+      "True"
+    ],
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following roles can delete a problem task?",
+    "correct_answers": [
+      "problem_admin"
+    ],
+    "incorrect_answers": [
+      "Problem_task_analyst",
+      "problem_manager",
+      "itil"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "How to make the problem state move to 'Resolved' instead of 'Closed' when the 'Accept Risk' button is clicked?",
+    "correct_answers": [
+      "Modify the property problem.acceptrisk.move_to_closed"
+    ],
+    "incorrect_answers": [
+      "Modify the logic in the script include 'Accept Problem Risk'",
+      "Modify the logic in the UI Action 'Accept Logic'",
+      "Modify the state mapping records in the Problem State Mapping table"
+    ]
+  },
+  
+  
+
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Catalog item can appear only in one category",
+    "correct_answers": [
+      "False"
+    ],
+    "incorrect_answers": [
+      "True"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which one of the following variable types is NOT supported in mobile?",
+    "correct_answers": [
+      "Container Variables"
+    ],
+    "incorrect_answers": [
+      "Reference",
+      "Date/Time",
+      "Lookup Select Box"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "How will the system behave if 'com.snc.incident.autoclose.basedon.resolved_at' property was set to No?",
+    "correct_answers": [
+      "The auto-closure feature will run based on the updated date"
+    ],
+    "incorrect_answers": [
+      "The auto-closure feature will be disabled",
+      "The auto-closure feature will be disabled for incidents created from now on",
+      "The auto-close feature will run based on resolution date"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which plugin should be installed to enable creating known error articles from problems?",
+    "correct_answers": [
+      "com.snc.best_practice.problem.knowledge"
+    ],
+    "incorrect_answers": [
+      "com.snc.best_practice.problem.madrid.knowledge",
+      "com.snc.known_error.problem.madrid.knowledge",
+      "com.snc.best_practice.knowledge"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the purpose of 'time_worked' field in incident table?",
+    "correct_answers": [
+      "This is a cumulative time logged by users"
+    ],
+    "incorrect_answers": [
+      "Total elapsed time since the incident was created (Business hours)",
+      "Total elapsed time since incident was in progress",
+      "Total elapsed time since the incident was created"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What will be the new state once you click on the 'Confirm' button in the problem form?",
+    "correct_answers": [
+      "Root Cause Analysis"
+    ],
+    "incorrect_answers": [
+      "Resolved",
+      "Fix in Progress",
+      "Closed"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Inbound Actions can be configured to enable creating or updating problems",
+    "correct_answers": [
+      "False"
+    ],
+    "incorrect_answers": [
+      "True"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Inbound Actions can be configured to enable creating or updating problems?",
+    "correct_answers": [
+      "Primary Known Error article"
+    ],
+    "incorrect_answers": [
+      "Known Error Number",
+      "Known Error Article",
+      "Known Error article number"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statement is true regarding configuration items and the table extended?",
+    "correct_answers": [
+      "Only technical CIs extend directly from the base configuration item table"
+    ],
+    "incorrect_answers": [
+      "Both technical and non-technical CIs extend directly from the base configuration item table",
+      "Only non-technical CIs extend directly from the base configuration item table",
+      "Neither CIs extend directly from the base configuration item table"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following record types would you use in order to propose a new standard change template?",
+    "correct_answers": [
+      "Catalog item"
+    ],
+    "incorrect_answers": [
+      "Order Guide",
+      "Record Producer",
+      "Content Item"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following are OOTB views for the incident?",
+    "correct_answers": [
+      "Password",
+      "Workspace",
+      "Agent View"
+    ],
+    "incorrect_answers": [
+      "Master",
+      "Metrics"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the purpose of the Knowledge check box in the Incident form?",
+    "correct_answers": [
+      "If checked, it will create a draft knowledge article once the incident is closed"
+    ],
+    "incorrect_answers": [
+      "If checked, it means that the incident is of type knowledge article",
+      "If checked, it will append the text in the resolution note to the work notes",
+      "If checked, it will create a draft knowledge article once the incident is resolved"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following roles is allowed to create a new CI class?",
+    "correct_answers": [
+      "itil_admin",
+      "admin"
+    ],
+    "incorrect_answers": [
+      "itil",
+      "cmdb_read"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a valid state for problem tasks?",
+    "correct_answers": [
+      "Closed"
+    ],
+    "incorrect_answers": [
+      "Assess",
+      "WIP",
+      "Root Cause Analysis"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which one of the following variable types is NOT supported in mobile?",
+    "correct_answers": [
+      "Numeric Scale"
+    ],
+    "incorrect_answers": [
+      "Yes/No",
+      "URL",
+      "IP Address"
+    ]
+  },
+  
+{
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a valid On Hold reason?",
+    "correct_answers": [
+      "Awaiting info"
+    ],
+    "incorrect_answers": [
+      "Awaiting Caller",
+      "Awaiting Change",
+      "Awaiting Vendor"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following roles can maintain user criteria?",
+    "correct_answers": [
+      "user_criteria_admin"
+    ],
+    "incorrect_answers": [
+      "none listed",
+      "catalog admin",
+      "itil_admin"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following is NOT a valid Request State?",
+    "correct_answers": [
+      "Rejected"
+    ],
+    "incorrect_answers": [
+      "Approved",
+      "Closed Incomplete",
+      "Pending Approval"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "By default, CAB Approval is only requested for normal changes with moderate to high risk",
+    "correct_answers": [
+      "True"
+    ],
+    "incorrect_answers": [
+      "False"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following are valid problem task types? (select all that apply)",
+    "correct_answers": [
+      "Root Cause Analysis",
+      "Implementation"
+    ],
+    "incorrect_answers": [
+      "Assessment",
+      "Investigation",
+      "General"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements is true regarding the permission that a user of itil role has?",
+    "correct_answers": [
+      "Users with itil role can update any incident except closed incidents"
+    ],
+    "incorrect_answers": [
+      "Users with itil role can update any incident except closed and resolved incidents",
+      "Users with itil role can update any incident",
+      "Users with itil role can only update incident created by them"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which table stores CI Relationship data?",
+    "correct_answers": [
+      "cmdb_rel_ci"
+    ],
+    "incorrect_answers": [
+      "cmdb_relation_ci",
+      "cmdb_ci_rel",
+      "cmdb_ci_relation"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following users has the permission to re-open an incident?",
+    "correct_answers": [
+      "itil Admin"
+    ],
+    "incorrect_answers": [
+      "incident caller",
+      "incident manager",
+      "none of the listed answers",
+      "itil User"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following roles can update change type?",
+    "correct_answers": [
+      "none of the listed answers"
+    ],
+    "incorrect_answers": [
+      "itil",
+      "itil_admin",
+      "change_manager"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "Which of the following statements is true regarding conflict detection for change requests?",
+    "correct_answers": [
+      "all mentioned statements are true"
+    ],
+    "incorrect_answers": [
+      "conflict detection can be run manually",
+      "conflict detection is executed everytime an active change request is updated",
+      "there is a scheduled job to update conflicts that runs on a periodic basis"
+    ]
+  },
+  {
+    "type": "multiple",
+    "category": "ITSM",
+    "question": "What is the purpose of 'reassignment_count' field in incident table?",
+    "correct_answers": [
+      "It stores the number of times the 'Assigned to' value changed"
+    ],
+    "incorrect_answers": [
+      "It stores the number of times the 'Assignment group' value changed",
+      "It stored the number of times the incident was responded by the caller",
+      "It stored the number of times the incident was reassigned to the caller"
+    ]
+  }
+]
+}

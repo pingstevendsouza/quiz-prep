@@ -1,0 +1,276 @@
+import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import he from 'he';
+import { EXAMS } from '../constants';
+import { shuffle } from '../utils';
+
+// Hardcoded across both legacy apps (classic Stats.js, airframe ResultsPage.js) —
+// there is no per-exam passing-score config anywhere in the original data model.
+export const PASSING_SCORE = 60;
+
+const QuizContext = createContext(null);
+
+const DEFAULT_QUIZ_CONFIG = {
+  exam: 'CSA',
+  doShuffle: 'no',
+  fromVal: 1,
+  toVal: 60,
+  showAnswers: false,
+  countdownTime: 5400, // 1 hour 30 min, in seconds
+};
+
+// Exact per-question grading formula from the original Quiz/QuizPage
+// components: the user's sorted selected answers (already he-decoded at
+// selection time) are compared, as a JSON string, against the he-decoded,
+// sorted correct_answers from the exam data.
+const gradeQuestion = (question, selected) => {
+  const sel = selected || [];
+  const isCorrect =
+    JSON.stringify([...sel].sort()) ===
+    he.decode(JSON.stringify([...question.correct_answers].sort()));
+  return isCorrect ? 1 : 0;
+};
+
+// Builds the full { totalQuestions, correctAnswers, timeTaken, questionsAndAnswers }
+// result payload by grading every question against the user's latest selection.
+// NOTE: the original apps computed/accumulated this incrementally as the user
+// clicked "Next" (and un-did it on "Previous"). This app adds a question
+// navigator that lets the user jump to any question out of order, which the
+// incremental approach can't support correctly (jumping skips the Next/Prev
+// bookkeeping). Computing the full result once, at submit/time-up time, from
+// the final userSelectedAns array is behaviorally identical to the original
+// for straight-through navigation, and is the only approach that stays
+// correct when the user jumps around via the navigator.
+const buildResult = (questions, userSelectedAns, timeTaken) => {
+  let correctAnswers = 0;
+  const questionsAndAnswers = questions.map((question, i) => {
+    const selected = userSelectedAns[i] || [];
+    const point = gradeQuestion(question, selected);
+    correctAnswers += point;
+    return {
+      question: he.decode(question.question),
+      user_answer: selected,
+      correct_answer: question.correct_answers.map((a) => he.decode(a)),
+      point,
+    };
+  });
+
+  return {
+    totalQuestions: questions.length,
+    correctAnswers,
+    timeTaken,
+    questionsAndAnswers,
+  };
+};
+
+export const QuizProvider = ({ children }) => {
+  const [exams, setExams] = useState(EXAMS);
+  const [quizConfig, setQuizConfigState] = useState(DEFAULT_QUIZ_CONFIG);
+
+  const [questions, setQuestions] = useState(null);
+  const [countdownSeconds, setCountdownSeconds] = useState(null);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [userSelectedAns, setUserSelectedAns] = useState([]);
+  const [timeTaken, setTimeTaken] = useState(null);
+
+  const [isQuizActive, setIsQuizActive] = useState(false);
+  const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [resultData, setResultData] = useState(null);
+
+  const fetchExams = useCallback(() => {
+    return fetch('/api/list-exams')
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.exams) setExams(data.exams);
+      })
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    fetchExams();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const updateQuizConfig = useCallback((patch) => {
+    setQuizConfigState((prev) => ({ ...prev, ...patch }));
+  }, []);
+
+  // Fetch + shuffle/slice logic adapted from Main/index.js and
+  // airframe/DashboardPage.js's fetchData. The originals treated "shuffle"
+  // and "from/to range" as mutually exclusive: shuffle=yes drew numOfQuestions
+  // random questions from the *entire* bank, silently ignoring fromVal/toVal.
+  // Shuffle now always applies within the selected range instead, so it
+  // shuffles the order of exactly the questions the user asked for.
+  const startQuiz = useCallback(async () => {
+    const { exam, doShuffle, fromVal, toVal, countdownTime } = quizConfig;
+
+    try {
+      const response = await fetch('/api/upload-json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: `${exam}.json`, type: 'json' }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch exam data. Please try again.');
+      }
+
+      const data = await response.json();
+      const { response_code, results } = data;
+
+      if (response_code === 404) {
+        return {
+          ok: false,
+          error:
+            "The API doesn't have enough questions for your query. Please change the number of questions or the question range and try again.",
+        };
+      }
+
+      results.forEach((element) => {
+        const options = [...new Set([...element.correct_answers, ...element.incorrect_answers])];
+        element.options = shuffle(options);
+      });
+
+      const ranged = results.slice(fromVal - 1, toVal);
+      if (ranged.length === 0) {
+        return {
+          ok: false,
+          error: 'The selected question range is empty. Please adjust "From"/"To" and try again.',
+        };
+      }
+      const resultsMixed = doShuffle === 'yes' ? shuffle(ranged) : ranged;
+
+      setQuestions(resultsMixed);
+      setCountdownSeconds(countdownTime);
+      setQuestionIndex(0);
+      setUserSelectedAns([]);
+      setTimeTaken(null);
+      setResultData(null);
+      setIsQuizCompleted(false);
+      setIsQuizActive(true);
+
+      return { ok: true };
+    } catch (err) {
+      if (!navigator.onLine) {
+        return { ok: false, offline: true };
+      }
+      return { ok: false, error: err.message || 'Something went wrong. Please try again.' };
+    }
+  }, [quizConfig]);
+
+  const toggleOption = useCallback(
+    (decodedOption) => {
+      setUserSelectedAns((prev) => {
+        const updated = [...prev];
+        const current = updated[questionIndex] || [];
+        const isMultiple = questions[questionIndex].correct_answers.length > 1;
+
+        if (isMultiple) {
+          const idx = current.indexOf(decodedOption);
+          updated[questionIndex] = idx === -1 ? [...current, decodedOption] : current.filter((o) => o !== decodedOption);
+        } else {
+          updated[questionIndex] = [decodedOption];
+        }
+
+        return updated;
+      });
+    },
+    [questionIndex, questions]
+  );
+
+  const finalizeQuiz = useCallback(
+    (elapsedMs) => {
+      setResultData(buildResult(questions, userSelectedAns, elapsedMs));
+      setIsQuizActive(false);
+      setIsQuizCompleted(true);
+    },
+    [questions, userSelectedAns]
+  );
+
+  // Advances to the next question, or finalizes the quiz (grading every
+  // question) when called from the last question — mirrors the original
+  // handleNext's dual role of "Next" / "Submit".
+  const goNext = useCallback(() => {
+    if (questionIndex === questions.length - 1) {
+      finalizeQuiz(timeTaken || 0);
+      return 'submitted';
+    }
+    setQuestionIndex((i) => i + 1);
+    return 'next';
+  }, [questionIndex, questions, finalizeQuiz, timeTaken]);
+
+  const goPrev = useCallback(() => {
+    setQuestionIndex((i) => Math.max(0, i - 1));
+  }, []);
+
+  const goToQuestion = useCallback(
+    (index) => {
+      if (!questions) return;
+      if (index < 0 || index >= questions.length) return;
+      setQuestionIndex(index);
+    },
+    [questions]
+  );
+
+  // Same reshuffle behavior as the original replayQuiz: reshuffle question
+  // order and each question's option order, keep the same countdown length.
+  const replayQuiz = useCallback(() => {
+    setQuestions((prev) => {
+      const shuffled = shuffle(prev);
+      shuffled.forEach((q) => {
+        q.options = shuffle(q.options);
+      });
+      return shuffled;
+    });
+    setQuestionIndex(0);
+    setUserSelectedAns([]);
+    setTimeTaken(null);
+    setResultData(null);
+    setIsQuizCompleted(false);
+    setIsQuizActive(true);
+  }, []);
+
+  const resetQuiz = useCallback(() => {
+    setQuestions(null);
+    setCountdownSeconds(null);
+    setQuestionIndex(0);
+    setUserSelectedAns([]);
+    setTimeTaken(null);
+    setIsQuizActive(false);
+    setIsQuizCompleted(false);
+    setResultData(null);
+  }, []);
+
+  const value = {
+    exams,
+    fetchExams,
+    quizConfig,
+    updateQuizConfig,
+    questions,
+    countdownSeconds,
+    questionIndex,
+    userSelectedAns,
+    timeTaken,
+    setTimeTaken,
+    isQuizActive,
+    isQuizCompleted,
+    resultData,
+    startQuiz,
+    toggleOption,
+    goNext,
+    goPrev,
+    goToQuestion,
+    finalizeQuiz,
+    replayQuiz,
+    resetQuiz,
+  };
+
+  return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
+};
+
+export const useQuiz = () => {
+  const ctx = useContext(QuizContext);
+  if (!ctx) {
+    throw new Error('useQuiz must be used within a QuizProvider');
+  }
+  return ctx;
+};
