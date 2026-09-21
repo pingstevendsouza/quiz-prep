@@ -18,6 +18,40 @@ const DEFAULT_QUIZ_CONFIG = {
   countdownTime: 5400, // 1 hour 30 min, in seconds
 };
 
+// Mobile browsers frequently kill and reload a backgrounded tab/PWA instead
+// of just pausing it — all in-memory state (including an in-progress quiz)
+// is lost on that reload unless it's persisted somewhere. Snapshotting the
+// session to localStorage, and rehydrating from it on mount, is what makes
+// "minimize the app, reopen it" resume where it left off instead of
+// bouncing back to the dashboard.
+const SESSION_STORAGE_KEY = 'quizPrepSession';
+
+const loadSession = () => {
+  try {
+    const raw = localStorage.getItem(SESSION_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+};
+
+const saveSession = (session) => {
+  try {
+    localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session));
+  } catch {
+    // Storage unavailable (private browsing, quota, etc.) — the session
+    // just won't survive a reload; nothing else depends on this succeeding.
+  }
+};
+
+const clearSession = () => {
+  try {
+    localStorage.removeItem(SESSION_STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+};
+
 // Exact per-question grading formula from the original Quiz/QuizPage
 // components: the user's sorted selected answers (already he-decoded at
 // selection time) are compared, as a JSON string, against the he-decoded,
@@ -63,18 +97,42 @@ const buildResult = (questions, userSelectedAns, timeTaken) => {
 };
 
 export const QuizProvider = ({ children }) => {
+  const savedSession = loadSession();
+
   const [exams, setExams] = useState(EXAMS);
-  const [quizConfig, setQuizConfigState] = useState(DEFAULT_QUIZ_CONFIG);
+  const [quizConfig, setQuizConfigState] = useState(savedSession?.quizConfig ?? DEFAULT_QUIZ_CONFIG);
 
-  const [questions, setQuestions] = useState(null);
-  const [countdownSeconds, setCountdownSeconds] = useState(null);
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [userSelectedAns, setUserSelectedAns] = useState([]);
-  const [timeTaken, setTimeTaken] = useState(null);
+  const [questions, setQuestions] = useState(savedSession?.questions ?? null);
+  const [countdownSeconds, setCountdownSeconds] = useState(savedSession?.countdownSeconds ?? null);
+  const [questionIndex, setQuestionIndex] = useState(savedSession?.questionIndex ?? 0);
+  const [userSelectedAns, setUserSelectedAns] = useState(savedSession?.userSelectedAns ?? []);
+  // Absolute timestamp (ms) the current attempt started at, rather than a
+  // duration ticking down in local component state — that's what lets the
+  // remaining time be recomputed correctly from real elapsed wall-clock
+  // time after a reload, instead of resetting to the full duration.
+  const [quizStartedAt, setQuizStartedAt] = useState(savedSession?.quizStartedAt ?? null);
 
-  const [isQuizActive, setIsQuizActive] = useState(false);
-  const [isQuizCompleted, setIsQuizCompleted] = useState(false);
-  const [resultData, setResultData] = useState(null);
+  const [isQuizActive, setIsQuizActive] = useState(savedSession?.isQuizActive ?? false);
+  const [isQuizCompleted, setIsQuizCompleted] = useState(savedSession?.isQuizCompleted ?? false);
+  const [resultData, setResultData] = useState(savedSession?.resultData ?? null);
+
+  useEffect(() => {
+    if (!isQuizActive && !isQuizCompleted) {
+      clearSession();
+      return;
+    }
+    saveSession({
+      quizConfig,
+      questions,
+      countdownSeconds,
+      questionIndex,
+      userSelectedAns,
+      quizStartedAt,
+      isQuizActive,
+      isQuizCompleted,
+      resultData,
+    });
+  }, [quizConfig, questions, countdownSeconds, questionIndex, userSelectedAns, quizStartedAt, isQuizActive, isQuizCompleted, resultData]);
 
   const fetchExams = useCallback(() => {
     return fetch('/api/list-exams')
@@ -143,7 +201,7 @@ export const QuizProvider = ({ children }) => {
       setCountdownSeconds(countdownTime);
       setQuestionIndex(0);
       setUserSelectedAns([]);
-      setTimeTaken(null);
+      setQuizStartedAt(Date.now());
       setResultData(null);
       setIsQuizCompleted(false);
       setIsQuizActive(true);
@@ -177,6 +235,9 @@ export const QuizProvider = ({ children }) => {
     [questionIndex, questions]
   );
 
+  // elapsedMs is computed from the absolute quizStartedAt timestamp by the
+  // caller (real wall-clock time), not accumulated from a ticking timer —
+  // that stays correct even across a background-triggered reload.
   const finalizeQuiz = useCallback(
     (elapsedMs) => {
       setResultData(buildResult(questions, userSelectedAns, elapsedMs));
@@ -191,12 +252,12 @@ export const QuizProvider = ({ children }) => {
   // handleNext's dual role of "Next" / "Submit".
   const goNext = useCallback(() => {
     if (questionIndex === questions.length - 1) {
-      finalizeQuiz(timeTaken || 0);
+      finalizeQuiz(quizStartedAt ? Date.now() - quizStartedAt : 0);
       return 'submitted';
     }
     setQuestionIndex((i) => i + 1);
     return 'next';
-  }, [questionIndex, questions, finalizeQuiz, timeTaken]);
+  }, [questionIndex, questions, finalizeQuiz, quizStartedAt]);
 
   const goPrev = useCallback(() => {
     setQuestionIndex((i) => Math.max(0, i - 1));
@@ -223,7 +284,7 @@ export const QuizProvider = ({ children }) => {
     });
     setQuestionIndex(0);
     setUserSelectedAns([]);
-    setTimeTaken(null);
+    setQuizStartedAt(Date.now());
     setResultData(null);
     setIsQuizCompleted(false);
     setIsQuizActive(true);
@@ -234,7 +295,7 @@ export const QuizProvider = ({ children }) => {
     setCountdownSeconds(null);
     setQuestionIndex(0);
     setUserSelectedAns([]);
-    setTimeTaken(null);
+    setQuizStartedAt(null);
     setIsQuizActive(false);
     setIsQuizCompleted(false);
     setResultData(null);
@@ -249,8 +310,7 @@ export const QuizProvider = ({ children }) => {
     countdownSeconds,
     questionIndex,
     userSelectedAns,
-    timeTaken,
-    setTimeTaken,
+    quizStartedAt,
     isQuizActive,
     isQuizCompleted,
     resultData,

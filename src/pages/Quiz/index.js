@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import he from 'he';
 import Swal from 'sweetalert2';
@@ -18,7 +18,7 @@ const Quiz = () => {
     countdownSeconds,
     questionIndex,
     userSelectedAns,
-    setTimeTaken,
+    quizStartedAt,
     toggleOption,
     goNext,
     goPrev,
@@ -27,8 +27,17 @@ const Quiz = () => {
   } = useQuiz();
 
   const totalTimeMs = (countdownSeconds || 0) * 1000;
-  const [remainingMs, setRemainingMs] = useState(totalTimeMs);
+  // Remaining time is derived from an absolute deadline (quizStartedAt +
+  // totalTimeMs) rather than ticked down in local state — a duration ticking
+  // down resets to full on every remount and drifts when the tab is
+  // throttled/backgrounded. Deriving it from real wall-clock time means it's
+  // still correct after the mobile-background-reload this was built to fix.
+  const [now, setNow] = useState(Date.now());
   const [showAnswer, setShowAnswer] = useState(false);
+  const timeUpHandledRef = useRef(false);
+
+  const deadline = (quizStartedAt || Date.now()) + totalTimeMs;
+  const remainingMs = Math.max(0, deadline - now);
 
   useEffect(() => {
     if (questionIndex > 0) window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,36 +53,27 @@ const Quiz = () => {
   // QuizRoute (App.js) reacts to that itself and redirects to /results, so
   // nothing here needs to navigate on completion.
 
-  // Exact countdown/time-up behavior from the original Countdown /
-  // CountdownBadge components: ticks every second, keeps `timeTaken` in
-  // context continuously in sync (used if the user submits manually), and
-  // on reaching zero shows the same "time's up" prompt before auto-submitting.
   useEffect(() => {
-    const timer = setInterval(() => {
-      const next = remainingMs - 1000;
-      if (next >= 0) {
-        setRemainingMs(next);
-      } else {
-        clearInterval(timer);
-        Swal.fire({
-          icon: 'info',
-          title: "Oops! Time's up.",
-          text: 'See how you did!',
-          confirmButtonText: 'Check Results',
-          timer: 5000,
-          willClose: () => {
-            finalizeQuiz(totalTimeMs - remainingMs);
-          },
-        });
-      }
-    }, 1000);
+    const timer = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
-    return () => {
-      clearInterval(timer);
-      setTimeTaken(totalTimeMs - remainingMs + 1000);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remainingMs]);
+  // Fires once remainingMs actually reaches 0 — including immediately on
+  // mount if the deadline already passed while the app was backgrounded.
+  useEffect(() => {
+    if (remainingMs > 0 || timeUpHandledRef.current) return;
+    timeUpHandledRef.current = true;
+    Swal.fire({
+      icon: 'info',
+      title: "Oops! Time's up.",
+      text: 'See how you did!',
+      confirmButtonText: 'Check Results',
+      timer: 5000,
+      willClose: () => {
+        finalizeQuiz(totalTimeMs);
+      },
+    });
+  }, [remainingMs, totalTimeMs, finalizeQuiz]);
 
   if (!questions || !questions[questionIndex]) return null;
 
