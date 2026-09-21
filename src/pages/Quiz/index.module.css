@@ -193,6 +193,11 @@
   margin-bottom: var(--space-24);
 }
 
+.nextWrap {
+  display: flex;
+  align-items: center;
+}
+
 .hint {
   font-size: 12px;
   color: var(--color-text-muted);
@@ -273,8 +278,16 @@
     gap: var(--space-12);
   }
 
-  .footerNav > div {
-    justify-content: space-between;
+  .hint {
+    display: none;
+  }
+
+  .nextWrap {
+    width: 100%;
+  }
+
+  .nextWrap button {
+    width: 100%;
   }
 
   .navigatorTitle {

@@ -172,7 +172,7 @@ const Quiz = () => {
         <Button variant="secondary" icon={IconChevronLeft} onClick={goPrev} disabled={questionIndex === 0}>
           Previous
         </Button>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className={styles.nextWrap}>
           {selected.length === 0 && <span className={styles.hint}>Select an answer to continue</span>}
           <Button
             variant="primary"

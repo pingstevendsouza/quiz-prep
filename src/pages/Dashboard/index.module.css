@@ -172,6 +172,15 @@
     padding-right: var(--space-16);
   }
 
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+
   .errorBox {
     margin-left: var(--space-16);
     margin-right: var(--space-16);
